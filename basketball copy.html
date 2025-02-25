@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball - PE for Life</title>
+
+    <!-- Bootstrap & Custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="sidebars.css" rel="stylesheet">
+
+    <style>
+        /* Folder tab styling */
+        .tab-container {
+            display: flex;
+            border-bottom: 3px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+            margin-right: 5px;
+        }
+
+        .tab.active {
+            background-color: white;
+            border-bottom: 3px solid white;
+        }
+
+        .tab:hover {
+            background-color: #e9ecef;
+        }
+
+        /* Hide accordion containers initially */
+        .accordion-container {
+            display: none;
+        }
+
+        /* Show selected accordion */
+        .accordion-container.active {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Sidebar Navigation (Copy from `index.html`) -->
+    <div class="d-flex">
+        <!-- Sidebar Navigation -->
+        <div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar">
+            <a href="/"
+                class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold">PE for Life-Secondary</span>
+            </a>
+            <ul class="list-unstyled ps-0">
+
+                <!-- High School Menu -->
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
+                        data-bs-toggle="collapse" data-bs-target="#Highschool-submenu" aria-expanded="false">
+                        High School
+                    </button>
+                    <div class="collapse" id="Highschool-submenu">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
+                                    data-bs-toggle="collapse" data-bs-target="#territory-submenu">
+                                    Territory/Invasion Games
+                                </button>
+                                <div class="collapse" id="territory-submenu">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="basketball.html">Basketball</a></li>
+                                        <li><a href="field-hockey.html">Field Hockey</a></li>
+                                        <li><a href="flag-football.html">Flag Football</a></li>
+                                        <li>Lacrosse</li>
+                                        <li>Soccer</li>
+                                        <li>Team Handball</li>
+                                        <li>Ultimate</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
+                                    data-bs-toggle="collapse" data-bs-target="#striking-submenu">
+                                    Striking/Fielding
+                                </button>
+                                <div class="collapse" id="striking-submenu">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li>Softball</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
+                                    data-bs-toggle="collapse" data-bs-target="#target-submenu">
+                                    Target Games
+                                </button>
+                                <div class="collapse" id="target-submenu">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li>Golf</li>
+                                        <li>Disc Golf</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
+                                    data-bs-toggle="collapse" data-bs-target="#netwall-submenu">
+                                    Net/Wall
+                                </button>
+                                <div class="collapse" id="netwall-submenu">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li>Badminton</li>
+                                        <li>Pickleball</li>
+                                        <li>Tennis</li>
+                                        <li>Volleyball</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
+                                    data-bs-toggle="collapse" data-bs-target="#lifetime-submenu">
+                                    Lifetime/Leisure & Wellness
+                                </button>
+                                <div class="collapse" id="lifetime-submenu">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li>Fitness for Life</li>
+                                        <li>Walking</li>
+                                        <li>Strength & Conditioning</li>
+                                        <li>Yoga</li>
+                                        <li>Track & Field</li>
+                                        <li>Dance</li>
+                                        <li>Adventure</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Middle School Menu -->
+                <li class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center border-0" data-bs-toggle="collapse"
+                        data-bs-target="#middleschool-submenu" aria-expanded="false">
+                        Middle School
+                    </button>
+                    <div class="collapse" id="middleschool-submenu">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li>
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
+                                    data-bs-toggle="collapse" data-bs-target="#middleschool-territory-submenu">
+                                    Territory/Invasion Games
+                                </button>
+                                <div class="collapse" id="middleschool-territory-submenu">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li>Basketball</li>
+                                        <li>Field Hockey</li>
+                                        <li>Flag Football</li>
+                                        <li>Lacrosse</li>
+                                        <li>Soccer</li>
+                                        <li>Team Handball</li>
+                                        <li>Ultimate</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
+                                    data-bs-toggle="collapse" data-bs-target="#middleschool-striking-submenu">
+                                    Striking/Fielding
+                                </button>
+                                <div class="collapse" id="middleschool-striking-submenu">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li>Softball</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
+                                    data-bs-toggle="collapse" data-bs-target="#target-submenu">
+                                    Target Games
+                                </button>
+                                <div class="collapse" id="target-submenu">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li>Golf</li>
+                                        <li>Disc Golf</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
+                                    data-bs-toggle="collapse" data-bs-target="#netwall-submenu">
+                                    Net/Wall
+                                </button>
+                                <div class="collapse" id="netwall-submenu">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li>Badminton</li>
+                                        <li>Pickleball</li>
+                                        <li>Tennis</li>
+                                        <li>Volleyball</li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
+                                    data-bs-toggle="collapse" data-bs-target="#lifetime-submenu">
+                                    Lifetime/Leisure & Wellness
+                                </button>
+                                <div class="collapse" id="lifetime-submenu">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li>Fitness for Life</li>
+                                        <li>Walking</li>
+                                        <li>Strength & Conditioning</li>
+                                        <li>Yoga</li>
+                                        <li>Track & Field</li>
+                                        <li>Dance</li>
+                                        <li>Adventure</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="page-title text-center">Basketball</h1>
+                    </div>
+                </div>
+               
+                <!-- Folder Tabs -->
+                <div class="tab-container">
+                    <div class="tab active" onclick="showTab('advanced')">Advanced Basketball Sport Ed</div>
+                    <div class="tab" onclick="showTab('beginner')">Beginning Basketball</div>
+                    
+                    <!-- Accordion Containers -->
+                    <div id="advanced" class="accordion-container active">
+                    <div class="accordion" id="accordionAdvanced">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Essential Questions & Rationale
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionAdvanced">
+                                <div class="accordion-body">
+                                    <li>EQ1: Why is basketball considered to be a lifelong activity or sport?</li>
+                                    <li>EQ2: How can learning to play basketball help you play other invasion games?
+                                    </li>
+                                    <li>EQ3: Why is force production and force absorption important when playing
+                                        basketball?</li>
+                                    <Li>EQ4: How can basketball help individuals learn to work as a team?</Li>
+                                    <li>EQ5: Why are rules necessary to play basketball safely and fairly?</li>
+                                    <li>EQ6: How can playing basketball contribute to a person’s overall fitness both
+                                        now and in the future?</li>
+                                    <Li>EQ7: How do the different ways of scoring affect game play during basketball?
+                                    </Li>
+                                    <li>EQ8: How can a team most effectively keep the other team from scoring?</li>
+                                    <Li>EQ9: How can fair play enhance the enjoyment of the game of basketball?</Li>
+                                    <li>EQ10: How could you use what you have learned in basketball in other invasion
+                                        games?</li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Standards & Learning Outcomes
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionAdvanced">
+                                <div class="accordion-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-striped">
+                                            <thead class="table-dark">
+                                                <tr>
+                                                    <th>Lesson(s)</th>
+                                                    <th>Standard</th>
+                                                    <th>Learning Outcome</th>
+                                                    <th>Assessment</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1-20 (All)</td>
+                                                    <td>Demonstrate proper dribbling technique</td>
+                                                    <td>Complete dribbling drill without errors</td>
+                                                    <td>Dribbling obstacle course</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7-10</td>
+                                                    <td>Execute a layup with correct form</td>
+                                                    <td>Make 7/10 layups successfully</td>
+                                                    <td>Layup drill</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1-3, 10</td>
+                                                    <td>Pass accurately using chest and bounce pass</td>
+                                                    <td>Pass accurately to a moving partner</td>
+                                                    <td>Passing relay</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1-20 (All)</td>
+                                                    <td>Demonstrate proper defensive stance</td>
+                                                    <td>Maintain stance for 1-minute drill</td>
+                                                    <td>Defensive shuffle drill</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1-3, 10</td>
+                                                    <td>Understand offensive strategies</td>
+                                                    <td>Explain key plays and movements</td>
+                                                    <td>Film analysis of offensive plays</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>Execute a pick and roll</td>
+                                                    <td>Complete drill with proper timing</td>
+                                                    <td>Pick and roll simulation</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1-20 (All)</td>
+                                                    <td>Demonstrate proper shooting mechanics</td>
+                                                    <td>Make 5/10 mid-range shots</td>
+                                                    <td>Shooting fundamentals drill</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1-20 (All)</td>
+                                                    <td>Communicate effectively on the court</td>
+                                                    <td>Call out plays and defensive assignments</td>
+                                                    <td>Scrimmage with communication focus</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3-20</td>
+                                                    <td>S4.H3.L2: Assumes a leadership role (e.g., task or group leader,
+                                                        referee, coach) in a physical activity setting.</td>
+                                                    <td>(1) The students will demonstrate the ability to work as a team
+                                                        by selecting a team name, color, and mascot, completing the team
+                                                        roles form, and poster prior to the end of class.
+
+                                                        (2) Create a basketball warm up with your team.
+                                                    </td>
+                                                    <td>*Sport Ed Roles
+                                                        *Team Responsibility Rubric
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20</td>
+                                                    <td>S5.H2.L2: Chooses an appropriate level of challenge to
+                                                        experience success and desire to participate in a self-selected
+                                                        physical activity.</td>
+                                                    <td>Select opponents to challenge.</td>
+                                                    <td>*Team Responsibility Rubric/td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Resources & Materials Needed
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionAdvanced">
+                                <div class="accordion-body">
+                                    space holder
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Block Plan
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionAdvanced">
+                                <div class="accordion-body">
+                                    space holder
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Lesson Plan
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionAdvanced">
+                                <div class="accordion-body">
+                                    space holder
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Assessments & Grading Criteria
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionAdvanced">
+                                <div class="accordion-body">
+                                    space holder
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    Teacher Resources & At Home Assignments
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionAdvanced">
+                                <div class="accordion-body">
+                                    space holder
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="beginner" class="accordion-container active">
+                    <div class="accordion" id="accordionBeginner">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#beginnerOne" aria-expanded="true" aria-controls="beginnerOne">
+                                    Introduction to Basketball
+                                </button>
+                            </h2>
+                            <div id="beginnerOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionBeginner">
+                                <div class="accordion-body">
+                                    Learn the basics of basketball, including dribbling, shooting, and passing
+                                    techniques.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#beginnerTwo" aria-expanded="false" aria-controls="beginnerTwo">
+                                    Basic Rules & Gameplay
+                                </button>
+                            </h2>
+                            <div id="beginnerTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionBeginner">
+                                <div class="accordion-body">
+                                    Understanding the fundamental rules of basketball, including scoring, fouls, and
+                                    court positions.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="sticky-footer bg-light mt-auto py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo on the left -->
+            <div class="footer-logo d-flex align-items-center">
+                <a href="https://us.humankinetics.com/" target="_blank">
+                    <img src="images/HK logo horizontal 4C.png" alt="Logo" style="height: 40px;">
+                </a>
+            </div>
+
+            <!-- Centered text -->
+            <div class="footer-center-text text-center">
+                <p class="mb-0">PE for Life</p>
+            </div>
+
+            <!-- Right-aligned copyright text -->
+            <div class="footer-right-text">
+                <p class="mb-0">© 2025 Human Kinetics</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Tab Switching -->
+    <script>
+        function showTab(tabId) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.accordion-container').forEach(container => container.classList.remove('active'));
+
+            // Add active class to selected tab and content
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
