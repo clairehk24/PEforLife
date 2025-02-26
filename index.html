@@ -15,10 +15,12 @@
 
 <body>
     <div class="d-flex">
+        <!-- Mobile Sidebar Toggle Button -->
+        <button class="btn btn-primary d-md-none m-2" id="sidebarToggle">☰ Menu</button>
+        
         <!-- Sidebar Navigation -->
-        <div class="d-flex flex-column flex-shrink-0 p-3 sidebar">
-            <a href="index.html"
-                class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+        <div class="sidebar d-flex flex-column flex-shrink-0 p-3" id="sidebar">
+            <a href="index.html" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
                 <span class="fs-5 fw-semibold">PE for Life-Secondary</span>
             </a>
             <ul class="list-unstyled ps-0">
@@ -196,49 +198,42 @@
                 </li>
             </ul>
         </div>
-        <!-- Main Content Area -->
-        <div class="main-content">
-            <div class="container-fluid">
-                <!-- Title -->
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="page-title text-center">PE for Life - Secondary</h1>
-                    </div>
+         <!-- Main Content Area -->
+         <div class="main-content container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="page-title text-center">PE for Life - Secondary</h1>
                 </div>
-
-                <!-- Content Area -->
-                <div class="row">
-                    <div class="col-12">
-                        <p class="content-text">
-                            Welcome to the PE for Life - Secondary website. Here, you will find various resources
-                            for Middle School and High School physical education, including lesson plans, activities,
-                            and curriculum guidance.
-                        </p>
-                    </div>
+                <div class="col-12">
+                    <p class="content-text">
+                        Welcome to the PE for Life - Secondary website. Here, you will find various resources for Middle School and High School physical education.
+                    </p>
                 </div>
             </div>
         </div>
+        
         <!-- Footer Section -->
         <footer class="sticky-footer mt-auto py-3">
             <div class="container d-flex justify-content-between align-items-center">
-                <!-- Logo on the left -->
                 <div class="footer-logo d-flex align-items-center">
                     <a href="https://us.humankinetics.com/" target="_blank">
-                        <img src="HK logo horizontal 4C.png" alt="Logo" style="height: 40px;">
+                        <img src="images/HK logo horizontal 4C.png" alt="Logo" style="height: 40px;">
                     </a>
                 </div>
-
-                <!-- Centered text -->
                 <div class="footer-center-text text-center">
                     <p class="mb-0">PE for Life</p>
                 </div>
-
-                <!-- Right-aligned copyright text -->
                 <div class="footer-right-text">
                     <p class="mb-0">© 2025 Human Kinetics</p>
                 </div>
             </div>
         </footer>
+
+    <script>
+        document.getElementById("sidebarToggle").addEventListener("click", function () {
+            document.getElementById("sidebar").classList.toggle("active");
+        });
+    </script>
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
