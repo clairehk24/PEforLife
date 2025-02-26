@@ -12,10 +12,9 @@
 </head>
 
 <body>
-    <!-- Mobile Sidebar Toggle Button -->
-    <button class="btn d-md-none m-2" id="sidebarToggle" style="background-color: #3A5253; color: white; border: none;">
-        ☰ Menu
-    </button>
+    <!-- Mobile & Tablet Sidebar Toggle Button -->
+    <button class="btn sidebar-toggle-btn d-lg-none m-2" id="sidebarToggle">☰ Menu</button>
+    
     <!-- Sidebar and Main Content Wrapper -->
     <div class="d-flex">
         <!-- Sidebar -->
@@ -225,8 +224,15 @@
     </footer>
 
     <script>
-        document.getElementById("sidebarToggle").addEventListener("click", function () {
-            document.getElementById("sidebar").classList.toggle("active");
+        document.addEventListener("DOMContentLoaded", function () {
+            const sidebar = document.querySelector(".sidebar");
+            const toggleButton = document.getElementById("sidebarToggle");
+            const mainContent = document.querySelector(".main-content");
+    
+            toggleButton.addEventListener("click", function () {
+                sidebar.classList.toggle("active");
+                mainContent.classList.toggle("shift-right");
+            });
         });
     </script>
 
