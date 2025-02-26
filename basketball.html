@@ -95,7 +95,10 @@
 </head>
 
 <body>
-
+    <!-- Mobile Sidebar Toggle Button -->
+    <button class="btn d-md-none m-2" id="sidebarToggle" style="background-color: #3A5253; color: white; border: none;">
+        ☰ Menu
+    </button>
     <!-- Sidebar Navigation (Copy from `index.html`) -->
     <div class="d-flex">
         <!-- Sidebar Navigation -->
@@ -618,6 +621,12 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        document.getElementById("sidebarToggle").addEventListener("click", function () {
+            document.getElementById("sidebar").classList.toggle("active");
+        });
+    </script>
 
     <!-- JavaScript for Tab Switching -->
     <script>

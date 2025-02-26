@@ -47,11 +47,20 @@ body {
 
 /* Adjust main content for smaller screens */
 @media (max-width: 768px) {
-  .main-content {
-      margin-left: 0;
-      padding: 20px;
+  .sidebar {
+      position: fixed;
+      left: -280px; /* Hide sidebar off-screen */
+      width: 280px;
+      height: 100vh;
+      background-color: #FFF5F5;
+      transition: left 0.3s ease-in-out;
+  }
+
+  .sidebar.active {
+      left: 0; /* Slide in when active */
   }
 }
+
 
 /* Mobile font sizes and layout adjustments */
 @media (max-width: 600px) {

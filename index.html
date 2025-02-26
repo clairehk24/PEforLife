@@ -14,10 +14,13 @@
 </head>
 
 <body>
+    <!-- Mobile Sidebar Toggle Button -->
+    <button class="btn d-md-none m-2" id="sidebarToggle" style="background-color: #3A5253; color: white; border: none;">
+        ☰ Menu
+    </button>
+    
+    
     <div class="d-flex">
-        <!-- Mobile Sidebar Toggle Button -->
-        <button class="btn btn-primary d-md-none m-2" id="sidebarToggle">☰ Menu</button>
-        
         <!-- Sidebar Navigation -->
         <div class="sidebar d-flex flex-column flex-shrink-0 p-3" id="sidebar">
             <a href="index.html" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
@@ -211,13 +214,14 @@
                 </div>
             </div>
         </div>
-        
+    </div>
+
         <!-- Footer Section -->
         <footer class="sticky-footer mt-auto py-3">
             <div class="container d-flex justify-content-between align-items-center">
                 <div class="footer-logo d-flex align-items-center">
                     <a href="https://us.humankinetics.com/" target="_blank">
-                        <img src="images/HK logo horizontal 4C.png" alt="Logo" style="height: 40px;">
+                        <img src="HK logo horizontal 4C.png" alt="Logo" style="height: 40px;">
                     </a>
                 </div>
                 <div class="footer-center-text text-center">
@@ -229,11 +233,11 @@
             </div>
         </footer>
 
-    <script>
-        document.getElementById("sidebarToggle").addEventListener("click", function () {
-            document.getElementById("sidebar").classList.toggle("active");
-        });
-    </script>
+        <script>
+            document.getElementById("sidebarToggle").addEventListener("click", function () {
+                document.getElementById("sidebar").classList.toggle("active");
+            });
+        </script>
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
