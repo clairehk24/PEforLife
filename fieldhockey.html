@@ -14,11 +14,10 @@
 <body>
     <!-- Mobile & Tablet Sidebar Toggle Button -->
     <button class="btn sidebar-toggle-btn d-lg-none m-2" id="sidebarToggle">☰ Menu</button>
-    
+
     <!-- Sidebar and Main Content Wrapper -->
-    <div class="d-flex">
-        <!-- Sidebar -->
-        <div class="sidebar">
+        <div class="d-flex">
+            <!-- Sidebar Navigation -->
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar">
                 <a href="index.html"
                     class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
@@ -224,16 +223,16 @@
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sidebar = document.querySelector(".sidebar");
-            const toggleButton = document.getElementById("sidebarToggle");
-            const mainContent = document.querySelector(".main-content");
-    
-            toggleButton.addEventListener("click", function () {
-                sidebar.classList.toggle("active");
-                mainContent.classList.toggle("shift-right");
+            document.addEventListener("DOMContentLoaded", function () {
+                const sidebar = document.querySelector(".sidebar");
+                const toggleButton = document.getElementById("sidebarToggle");
+                const mainContent = document.querySelector(".main-content");
+        
+                toggleButton.addEventListener("click", function () {
+                    sidebar.classList.toggle("active");
+                    mainContent.classList.toggle("shift-right");
+                });
             });
-        });
     </script>
 
     <script>
