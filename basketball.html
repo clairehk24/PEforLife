@@ -58,38 +58,44 @@
         .accordion-body {
             text-align: left;
             padding-left: 15px;
-            color: #27231E;
+            color: #27201e;
             /* Updated text color */
+            background-color: #FFF5F5
         }
 
         /* If your accordion body has list items */
-        .accordion-body li {
-            text-align: left;
-            margin-left: 20px;
-            /* Optional: Improves spacing */
-            margin-bottom: 8px;
-            /* Adds spacing between list items */
-            line-height: 1.5;
-            /* Improves readability */
+        /* Default accordion button styles */
+        .accordion-button {
+            background-color: #FFF5F5 !important;
+            /* Default background color */
+            color: #27231E !important;
+            border: none;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
 
-            /* Updated accordion button styles to remove blue highlight */
-            .accordion-button {
-                background-color: #FFF5F5;
-                /* Match background color */
-                color: #27231E;
-                /* Match text color */
-            }
+        /* Lighter shade when expanded */
+        .accordion-button:not(.collapsed) {
+            background-color: #F2A48C !important;
+            /* Lightened shade of #E07A5F */
+            color: #27201e !important;
+            font-weight: bold;
+        }
 
-            .accordion-button:not(.collapsed) {
-                background-color: #E07A5F !important;
-                /* Custom highlight color */
-                color: #FFF5F5 !important;
-            }
+        /* Hover effect */
+        .accordion-button:hover {
+            background-color: #E59072 !important;
+            /* Slightly lighter than original */
+            color: #27201e !important;
+            font-weight: bold;
+            box-shadow: 0px 0px 10px rgba(224, 122, 95, 0.5);
+            /* Soft highlight effect */
+        }
 
-            .accordion-button:focus {
-                box-shadow: none !important;
-                outline: none !important;
-            }
+        /* Remove default Bootstrap blue box-shadow */
+        .accordion-button:focus {
+            box-shadow: 0px 0px 10px rgba(224, 122, 95, 0.7) !important;
+            /* Stronger glow on focus */
+            outline: none !important;
         }
     </style>
 </head>
@@ -622,17 +628,17 @@
     </footer>
 
     <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const sidebar = document.querySelector(".sidebar");
-                const toggleButton = document.getElementById("sidebarToggle");
-                const mainContent = document.querySelector(".main-content");
-        
-                toggleButton.addEventListener("click", function () {
-                    sidebar.classList.toggle("active");
-                    mainContent.classList.toggle("shift-right");
-                });
+        document.addEventListener("DOMContentLoaded", function () {
+            const sidebar = document.querySelector(".sidebar");
+            const toggleButton = document.getElementById("sidebarToggle");
+            const mainContent = document.querySelector(".main-content");
+
+            toggleButton.addEventListener("click", function () {
+                sidebar.classList.toggle("active");
+                mainContent.classList.toggle("shift-right");
             });
-        </script>
+        });
+    </script>
 
     <!-- JavaScript for Tab Switching -->
     <script>
