@@ -149,6 +149,39 @@ body {
     color: #E07A5F; 
 }
 
+.custom-btn {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-weight: bold;
+  text-align: left;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.secondary-btn {
+  background-color: #3A5253;
+}
+
+.elementary-btn {
+  background-color: #3A5253;
+}
+
+.resources-btn {
+  background-color: #3A5253;
+}
+
+.custom-btn:hover {
+  filter: brightness(90%);
+  background-color: #E07A5F;
+}
+
 /* Sticky Footer */
 .sticky-footer {
   position: fixed;
