@@ -4,289 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basketball - PE for Life</title>
+    <title>PE for Life</title>
 
-    <!-- Bootstrap & Custom CSS -->
+    <!-- Bootstrap 5.3.3 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="test.css" rel="stylesheet">
 
-    <style>
-        /* Folder tab styling */
-        .tab-container {
-            display: flex;
-            border-bottom: 0 solid #3A5253;
-            /* Updated secondary color */
-            margin-bottom: 20px;
-        }
-
-        .tab {
-            padding: 10px 20px;
-            cursor: pointer;
-            font-weight: bold;
-            background-color: #FFF5F5;
-            /* Updated background color */
-            border: 1px solid #3A5253;
-            /* Updated secondary color */
-            border-bottom: none;
-            border-radius: 8px 8px 0 0;
-            margin-right: 5px;
-            color: #27231E;
-            /* Updated text color */
-        }
-
-        .tab.active {
-            background-color: #E07A5F;
-            color: #27231E;
-        }
-
-        .tab:hover {
-            background-color: #E07A5F;
-            /* Updated accent color */
-        }
-
-        /* Hide accordion containers initially */
-        .accordion-container {
-            display: none;
-        }
-
-        /* Show selected accordion */
-        .accordion-container.active {
-            display: block;
-        }
-
-        /* Left-align accordion body content */
-        .accordion-body {
-            text-align: left;
-            padding-left: 15px;
-            color: #27201e;
-            /* Updated text color */
-            background-color: #FFF5F5
-        }
-
-        /* If your accordion body has list items */
-        /* Default accordion button styles */
-        .accordion-button {
-            background-color: #FFF5F5 !important;
-            /* Default background color */
-            color: #27231E !important;
-            border: none;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        /* Lighter shade when expanded */
-        .accordion-button:not(.collapsed) {
-            background-color: #F2A48C !important;
-            /* Lightened shade of #E07A5F */
-            color: #27201e !important;
-            font-weight: bold;
-        }
-
-        /* Hover effect */
-        .accordion-button:hover {
-            background-color: #E59072 !important;
-            /* Slightly lighter than original */
-            color: #27201e !important;
-            font-weight: bold;
-            box-shadow: 0px 0px 10px rgba(224, 122, 95, 0.5);
-            /* Soft highlight effect */
-        }
-
-        /* Remove default Bootstrap blue box-shadow */
-        .accordion-button:focus {
-            box-shadow: 0px 0px 10px rgba(224, 122, 95, 0.7) !important;
-            /* Stronger glow on focus */
-            outline: none !important;
-        }
-    </style>
+    <!-- Custom Sidebar Styles -->
+    <link href="customstyle.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Mobile & Tablet Sidebar Toggle Button -->
     <button class="btn sidebar-toggle-btn d-lg-none m-2" id="sidebarToggle">☰ Menu</button>
 
-    <!-- Sidebar Navigation (Copy from `index.html`) -->
-    <div class="d-flex">
-        <!-- Sidebar Navigation -->
-        <div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar">
-            <a href="index.html"
-                class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
-                <span class="fs-5 fw-semibold">PE for Life-Secondary</span>
-            </a>
-            <ul class="list-unstyled ps-0">
-
-                <!-- High School Menu -->
-                <li class="mb-1">
+    <div class="d-flex flex-column flex-shrink-0 p-3 sidebar">
+        <a href="index.html"
+            class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+            <span class="fs-5 fw-semibold">PE for Life - Home</span>
+        </a>
+        <!-- Elementary Button -->
+        <div class="mb-3">
+            <button class="custom-btn elementary-btn w-100 text-start" data-bs-toggle="collapse"
+                data-bs-target="#elementary-menu" aria-expanded="false">
+                Elementary
+            </button>
+            <div class="collapse" id="elementary-menu">
+                <div class="mb-1">
                     <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
-                        data-bs-toggle="collapse" data-bs-target="#Highschool-submenu" aria-expanded="false">
-                        High School
+                        data-bs-toggle="collapse" data-bs-target="#K2-submenu" aria-expanded="false">
+                        K-2
                     </button>
-                    <div class="collapse" id="Highschool-submenu">
+                    <div class="collapse" id="K2-submenu">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li>
                                 <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#territory-submenu">
-                                    Territory/Invasion Games
+                                    data-bs-toggle="collapse" data-bs-target="#Locomotor/Nonlocomotory-submenu">
+                                    Locomotor/Nonlocomotory
                                 </button>
-                                <div class="collapse" id="territory-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1">
-                                        <li><a href="basketball.html">Basketball</a></li>
-                                        <li><a href="fieldhockey.html">Field Hockey</a></li>
-                                        <li><a href="flagfootball.html">Flag Football</a></li>
-                                        <li>Lacrosse</li>
-                                        <li>Soccer</li>
-                                        <li>Team Handball</li>
-                                        <li>Ultimate</li>
+                                <div class="collapse" id="Locomotor/Nonlocomotory-submenu">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="Loco_Content_set_1.html">Content Set I</a></li>
+                                        <li><a href="">Content Set II</a></li>
+                                        <li><a href="">Content Set III</a></li>
                                     </ul>
                                 </div>
                             </li>
-
                             <li>
                                 <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#striking-submenu">
-                                    Striking/Fielding
+                                    data-bs-toggle="collapse" data-bs-target="#Manipulative-submenu">
+                                    Manipulative
                                 </button>
-                                <div class="collapse" id="striking-submenu">
+                                <div class="collapse" id="Manipulative-submenu">
                                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li>Softball</li>
+                                        <li><a href="">Content Set I</a></li>
+                                        <li><a href="">Content Set II</a></li>
+                                        <li><a href="">Content Set III</a></li>
                                     </ul>
                                 </div>
                             </li>
-
                             <li>
                                 <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#target-submenu">
-                                    Target Games
+                                    data-bs-toggle="collapse" data-bs-target="#Rhythm&Dance-submenu">
+                                    Rhythm & Dance
                                 </button>
-                                <div class="collapse" id="target-submenu">
+                                <div class="collapse" id="Rhythm&Dance-submenu">
                                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li>Golf</li>
-                                        <li>Disc Golf</li>
+                                        <li><a href="">Content Set I</a></li>
+                                        <li><a href="">Content Set II</a></li>
+                                        <li><a href="">Content Set III</a></li>
                                     </ul>
                                 </div>
                             </li>
-
                             <li>
                                 <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#netwall-submenu">
-                                    Net/Wall
+                                    data-bs-toggle="collapse" data-bs-target="#DevelopmentalGymnastics-submenu">
+                                    Developmental Gymnastics
                                 </button>
-                                <div class="collapse" id="netwall-submenu">
+                                <div class="collapse" id="DevelopmentalGymnastics-submenu">
                                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li>Badminton</li>
-                                        <li>Pickleball</li>
-                                        <li>Tennis</li>
-                                        <li>Volleyball</li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#lifetime-submenu">
-                                    Lifetime/Leisure & Wellness
-                                </button>
-                                <div class="collapse" id="lifetime-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li>Fitness for Life</li>
-                                        <li>Walking</li>
-                                        <li>Strength & Conditioning</li>
-                                        <li>Yoga</li>
-                                        <li>Track & Field</li>
-                                        <li>Dance</li>
-                                        <li>Adventure</li>
+                                        <li><a href="">Content Set I</a></li>
+                                        <li><a href="">Content Set II</a></li>
+                                        <li><a href="">Content Set III</a></li>
                                     </ul>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                </li>
-
-                <!-- Middle School Menu -->
-                <li class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center border-0" data-bs-toggle="collapse"
-                        data-bs-target="#middleschool-submenu" aria-expanded="false">
-                        Middle School
+                </div>
+                <div class="mb-1">
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
+                        data-bs-toggle="collapse" data-bs-target="#35-submenu" aria-expanded="false">
+                        3-5
                     </button>
-                    <div class="collapse" id="middleschool-submenu">
+                    <div class="collapse" id="35-submenu">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             <li>
                                 <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#middleschool-territory-submenu">
+                                    data-bs-toggle="collapse" data-bs-target="#Territory/InvasionGames-submenu">
                                     Territory/Invasion Games
                                 </button>
-                                <div class="collapse" id="middleschool-territory-submenu">
+                                <div class="collapse" id="Territory/InvasionGames-submenu">
                                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li>Basketball</li>
-                                        <li>Field Hockey</li>
-                                        <li>Flag Football</li>
-                                        <li>Lacrosse</li>
-                                        <li>Soccer</li>
-                                        <li>Team Handball</li>
-                                        <li>Ultimate</li>
+                                        <li><a href="">Applications and Concepts of Soccer</a></li>
+                                        <li><a href="basketball.html">Applications and Concepts of Basketball</a></li>
                                     </ul>
                                 </div>
                             </li>
                             <li>
                                 <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#middleschool-striking-submenu">
+                                    data-bs-toggle="collapse" data-bs-target="#Striking/Fielding-submenu">
                                     Striking/Fielding
                                 </button>
-                                <div class="collapse" id="middleschool-striking-submenu">
+                                <div class="collapse" id="Striking/Fielding-submenu">
                                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li>Softball</li>
+                                        <li><a href="">Application and Concepts of Striking
+                                                Activities</a></li>
                                     </ul>
                                 </div>
                             </li>
                             <li>
                                 <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#target-submenu">
-                                    Target Games
-                                </button>
-                                <div class="collapse" id="target-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li>Golf</li>
-                                        <li>Disc Golf</li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#netwall-submenu">
+                                    data-bs-toggle="collapse" data-bs-target="#Net/Wall-submenu">
                                     Net/Wall
                                 </button>
-                                <div class="collapse" id="netwall-submenu">
+                                <div class="collapse" id="Net/Wall-submenu">
                                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li>Badminton</li>
-                                        <li>Pickleball</li>
-                                        <li>Tennis</li>
-                                        <li>Volleyball</li>
+                                        <li><a href="">Application and Concepts of Volleying</a></li>
                                     </ul>
                                 </div>
                             </li>
-
                             <li>
                                 <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#lifetime-submenu">
-                                    Lifetime/Leisure & Wellness
+                                    data-bs-toggle="collapse" data-bs-target="#TargetGames-submenu">
+                                    Target Games
                                 </button>
-                                <div class="collapse" id="lifetime-submenu">
+                                <div class="collapse" id="TargetGames-submenu">
                                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li>Fitness for Life</li>
-                                        <li>Walking</li>
-                                        <li>Strength & Conditioning</li>
-                                        <li>Yoga</li>
-                                        <li>Track & Field</li>
-                                        <li>Dance</li>
-                                        <li>Adventure</li>
+                                        <li><a href="">Application and Concepts of Target Activities</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
+                                    data-bs-toggle="collapse" data-bs-target="#Rhythm&Dance2-submenu">
+                                    Rhythm & Dance
+                                </button>
+                                <div class="collapse" id="Rhythm&Dance2-submenu">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="">Application and Concepts of....</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
+                                    data-bs-toggle="collapse" data-bs-target="#DevelopmentalGymnastics2-submenu">
+                                    Developmental Gymnastics
+                                </button>
+                                <div class="collapse" id="DevelopmentalGymnastics2-submenu">
+                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                        <li><a href="">Application and Concepts of....</a></li>
                                     </ul>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
+        <!-- Secondary Button -->
+        <div class="mb-3">
+            <button class="custom-btn secondary-btn w-100 text-start" data-bs-toggle="collapse"
+                data-bs-target="#secondary-menu" aria-expanded="false">
+                Secondary
+            </button>
+            <div class="collapse" id="secondary-menu">
+                <ul class="btn-toggle-nav list-unstyled fw-normal ps-3 pt-2 pb-1 small">
+                    <li><a href="">Territory/Invasion Games </a></li>
+                    <li><a href="">Striking/Fielding</a></li>
+                    <li><a href="">Net/Wall</a></li>
+                    <li><a href="#">Target Games</a></li>
+                    <li><a href="#">Lifetime/Leisure & Wellness</a></li>
+                    <li><a href="#">Rhythm & Dance</a></li>
+                    <li><a href="#">Adventure/Outdoor Education</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Resources Button -->
+        <div class="mb-3">
+            <button class="custom-btn resources-btn w-100 text-start" data-bs-toggle="collapse"
+                data-bs-target="#resources-menu" aria-expanded="false">
+                Resources
+            </button>
+            <div class="collapse" id="resources-menu">
+                <ul class="btn-toggle-nav list-unstyled fw-normal ps-3 pt-2 pb-1 small">
+                    <li><a href="lesson-plans.html">Warmups/cooldowns</a></li>
+                    <li><a href="videos.html">Other potential resources</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
         <!-- Main Content Area -->
         <div class="main-content">
             <div class="container-fluid">
