@@ -1,415 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PE for Life</title>
 
     <!-- Bootstrap 5.3.3 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Custom Sidebar Styles -->
-    <link href="customstyle.css" rel="stylesheet">
-</head>
+    <link href="customstyle.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <!-- Mobile & Tablet Sidebar Toggle Button -->
-    <button class="btn sidebar-toggle-btn d-lg-none m-2" id="sidebarToggle">☰ Menu</button>
+    <button class="btn sidebar-toggle-btn d-lg-none m-2" id="sidebarToggle">
+      ☰ Menu
+    </button>
 
     <div class="d-flex flex-column flex-shrink-0 p-3 sidebar">
-        <a href="index.html"
-            class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
-            <span class="fs-5 fw-semibold">PE for Life - Home</span>
-        </a>
-        <!-- Elementary Button -->
-        <div class="mb-3">
-            <button class="custom-btn elementary-btn w-100 text-start" data-bs-toggle="collapse"
-                data-bs-target="#elementary-menu" aria-expanded="false">
-                Elementary
+      <a
+        href="index.html"
+        class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"
+      >
+        <span class="fs-5 fw-semibold">PE for Life - Home</span>
+      </a>
+      <!-- Elementary Button -->
+      <div class="mb-3">
+        <button
+          class="custom-btn elementary-btn w-100 text-start"
+          data-bs-toggle="collapse"
+          data-bs-target="#elementary-menu"
+          aria-expanded="false"
+        >
+          Elementary
+        </button>
+        <div class="collapse" id="elementary-menu">
+          <div class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
+              data-bs-toggle="collapse"
+              data-bs-target="#K2-submenu"
+              aria-expanded="false"
+            >
+              K-2
             </button>
-            <div class="collapse" id="elementary-menu">
-                <div class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
-                        data-bs-toggle="collapse" data-bs-target="#K2-submenu" aria-expanded="false">
-                        K-2
-                    </button>
-                    <div class="collapse" id="K2-submenu">
-                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Locomotor/Nonlocomotory-submenu">
-                                    Locomotor/Nonlocomotory
-                                </button>
-                                <div class="collapse" id="Locomotor/Nonlocomotory-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="Loco_Overview.html">Overview</a></li>
-                                        <li><a href="Loco_Content_set_1.html">Content Set I</a></li>
-                                        <li><a href="#">Content Set II</a></li>
-                                        <li><a href="#">Content Set III</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Manipulative-submenu">
-                                    Manipulative
-                                </button>
-                                <div class="collapse" id="Manipulative-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="Loco_Overview.html">Overview</a></li>
-                                        <li><a href="#">Content Set I</a></li>
-                                        <li><a href="#">Content Set II</a></li>
-                                        <li><a href="#">Content Set III</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Rhythm&Dance-submenu">
-                                    Rhythm & Dance
-                                </button>
-                                <div class="collapse" id="Rhythm&Dance-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="Loco_Overview.html">Overview</a></li>
-                                        <li><a href="#">Content Set I</a></li>
-                                        <li><a href="#">Content Set II</a></li>
-                                        <li><a href="#">Content Set III</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#DevelopmentalGymnastics-submenu">
-                                    Developmental Gymnastics
-                                </button>
-                                <div class="collapse" id="DevelopmentalGymnastics-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="Loco_Overview.html">Overview</a></li>
-                                        <li><a href="#">Content Set I</a></li>
-                                        <li><a href="#">Content Set II</a></li>
-                                        <li><a href="#">Content Set III</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
-                        data-bs-toggle="collapse" data-bs-target="#35-submenu" aria-expanded="false">
-                        3-5
-                    </button>
-                    <div class="collapse" id="35-submenu">
-                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Territory/InvasionGames-submenu">
-                                    Territory/Invasion Games
-                                </button>
-                                <div class="collapse" id="Territory/InvasionGames-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="#">Soccer</a></li>
-                                        <li><a href="basketball.html">Basketball</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Striking/Fielding-submenu">
-                                    Striking/Fielding
-                                </button>
-                                <div class="collapse" id="Striking/Fielding-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="#">Striking Activities</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Net/Wall-submenu">
-                                    Net/Wall
-                                </button>
-                                <div class="collapse" id="Net/Wall-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="#">Volleying</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#TargetGames-submenu">
-                                    Target Games
-                                </button>
-                                <div class="collapse" id="TargetGames-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="#">Target Activities</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Rhythm&Dance2-submenu">
-                                    Rhythm & Dance
-                                </button>
-                                <div class="collapse" id="Rhythm&Dance2-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="#">Spaceholder</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#DevelopmentalGymnastics2-submenu">
-                                    Developmental Gymnastics
-                                </button>
-                                <div class="collapse" id="DevelopmentalGymnastics2-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="#">Spaceholder</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="collapse" id="K2-submenu">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Locomotor/Nonlocomotory-submenu"
+                  >
+                    Locomotor/Nonlocomotory
+                  </button>
+                  <div class="collapse" id="Locomotor/Nonlocomotory-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="Loco_Overview.html">Overview</a></li>
+                      <li>
+                        <a href="Loco_Content_set_1.html">Content Set I</a>
+                      </li>
+                      <li><a href="#">Content Set II</a></li>
+                      <li><a href="#">Content Set III</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Manipulative-submenu"
+                  >
+                    Manipulative
+                  </button>
+                  <div class="collapse" id="Manipulative-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="Loco_Overview.html">Overview</a></li>
+                      <li><a href="#">Content Set I</a></li>
+                      <li><a href="#">Content Set II</a></li>
+                      <li><a href="#">Content Set III</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Rhythm&Dance-submenu"
+                  >
+                    Rhythm & Dance
+                  </button>
+                  <div class="collapse" id="Rhythm&Dance-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="Loco_Overview.html">Overview</a></li>
+                      <li><a href="#">Content Set I</a></li>
+                      <li><a href="#">Content Set II</a></li>
+                      <li><a href="#">Content Set III</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#DevelopmentalGymnastics-submenu"
+                  >
+                    Developmental Gymnastics
+                  </button>
+                  <div class="collapse" id="DevelopmentalGymnastics-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="Loco_Overview.html">Overview</a></li>
+                      <li><a href="#">Content Set I</a></li>
+                      <li><a href="#">Content Set II</a></li>
+                      <li><a href="#">Content Set III</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </div>
-        </div>
-        <!-- Secondary Button -->
-        <div class="mb-3">
-            <button class="custom-btn secondary-btn w-100 text-start" data-bs-toggle="collapse"
-                data-bs-target="#secondary-menu" aria-expanded="false">
-                Secondary
+          </div>
+          <div class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
+              data-bs-toggle="collapse"
+              data-bs-target="#35-submenu"
+              aria-expanded="false"
+            >
+              3-5
             </button>
-            <div class="collapse" id="secondary-menu">
-                <ul class="btn-toggle-nav list-unstyled fw-normal ps-3 pt-2 pb-1 small">
-                    <li><a href="#">Territory/Invasion Games </a></li>
-                    <li><a href="#">Striking/Fielding</a></li>
-                    <li><a href="#">Net/Wall</a></li>
-                    <li><a href="#">Target Games</a></li>
-                    <li><a href="#">Lifetime/Leisure & Wellness</a></li>
-                    <li><a href="#">Rhythm & Dance</a></li>
-                    <li><a href="#">Adventure/Outdoor Education</a></li>
-                </ul>
+            <div class="collapse" id="35-submenu">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Territory/InvasionGames-submenu"
+                  >
+                    Territory/Invasion Games
+                  </button>
+                  <div class="collapse" id="Territory/InvasionGames-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="#">Soccer</a></li>
+                      <li><a href="basketball.html">Basketball</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Striking/Fielding-submenu"
+                  >
+                    Striking/Fielding
+                  </button>
+                  <div class="collapse" id="Striking/Fielding-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="#">Striking Activities</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Net/Wall-submenu"
+                  >
+                    Net/Wall
+                  </button>
+                  <div class="collapse" id="Net/Wall-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="#">Volleying</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#TargetGames-submenu"
+                  >
+                    Target Games
+                  </button>
+                  <div class="collapse" id="TargetGames-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="#">Target Activities</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Rhythm&Dance2-submenu"
+                  >
+                    Rhythm & Dance
+                  </button>
+                  <div class="collapse" id="Rhythm&Dance2-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="#">Spaceholder</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#DevelopmentalGymnastics2-submenu"
+                  >
+                    Developmental Gymnastics
+                  </button>
+                  <div class="collapse" id="DevelopmentalGymnastics2-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="#">Spaceholder</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
-        <!-- Resources Button -->
-        <div class="mb-3">
-            <button class="custom-btn resources-btn w-100 text-start" data-bs-toggle="collapse"
-                data-bs-target="#resources-menu" aria-expanded="false">
-                Resources
-            </button>
-            <div class="collapse" id="resources-menu">
-                <ul class="btn-toggle-nav list-unstyled fw-normal ps-3 pt-2 pb-1 small">
-                    <li><a href="#">Warmups/cooldowns</a></li>
-                    <li><a href="#">Other potential resources</a></li>
-                </ul>
-            </div>
+      </div>
+      <!-- Secondary Button -->
+      <div class="mb-3">
+        <button
+          class="custom-btn secondary-btn w-100 text-start"
+          data-bs-toggle="collapse"
+          data-bs-target="#secondary-menu"
+          aria-expanded="false"
+        >
+          Secondary
+        </button>
+        <div class="collapse" id="secondary-menu">
+          <ul
+            class="btn-toggle-nav list-unstyled fw-normal ps-3 pt-2 pb-1 small"
+          >
+            <li><a href="#">Territory/Invasion Games </a></li>
+            <li><a href="#">Striking/Fielding</a></li>
+            <li><a href="#">Net/Wall</a></li>
+            <li><a href="#">Target Games</a></li>
+            <li><a href="#">Lifetime/Leisure & Wellness</a></li>
+            <li><a href="#">Rhythm & Dance</a></li>
+            <li><a href="#">Adventure/Outdoor Education</a></li>
+          </ul>
         </div>
+      </div>
+      <!-- Resources Button -->
+      <div class="mb-3">
+        <button
+          class="custom-btn resources-btn w-100 text-start"
+          data-bs-toggle="collapse"
+          data-bs-target="#resources-menu"
+          aria-expanded="false"
+        >
+          Resources
+        </button>
+        <div class="collapse" id="resources-menu">
+          <ul
+            class="btn-toggle-nav list-unstyled fw-normal ps-3 pt-2 pb-1 small"
+          >
+            <li><a href="#">Warmups/cooldowns</a></li>
+            <li><a href="#">Other potential resources</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <!-- Main Content Area -->
     <div class="main-content">
-        <div class="container-fluid">
-            <!-- Title -->
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="page-title text-center">Overview of Grades K-2 Locomotor/Non-Locomotor Unit</h1>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <!-- Accordion Containers -->
-                    <div id="advanced" class="accordion-container active">
-                        <div class="accordion" id="accordionAdvanced">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        Statement of Purpose
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionAdvanced">
-                                    <div class="accordion-body">
-                                        <p> The purpose of this unit is to develop locomotor and non-locomotor skills in
-                                            grades K-2 that provide the foundation for units in manipulative skills;
-                                            rhythms and dance; etc. The unit is composed of three Content Sets (6-7
-                                            lessons each) and the content of Content Set II & III reinforces and extends
-                                            the skills, use of skills, and movement concepts that were taught in the
-                                            previous Content Set/Sets of the Locomotor/Non-Locomotor unit. </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Brief description of unit
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionAdvanced">
-                                    <div class="accordion-body">
-                                        <p> This unit is composed of three progressive Content Sets of Locomotor and
-                                            Non-locomotor skills which are also aligned with appropriate movement
-                                            concepts. Each level is aligned with the 2024 National PE standards and
-                                            appropriate for grades K-2. Summative and diagnostic (formative) assessments
-                                            will be provided for each identified Unit Goal. The content of each Content
-                                            Setis described below: </p>
-                                        <li><strong>Content Set I</strong> is designed to introduce/explore the
-                                            locomotor skills of
-                                            Jumping, Galloping, Sliding, Running, Hopping, and Skipping and the
-                                            non-locomotor skills of Bending, Stretching, Swinging, Swaying, Stretching,
-                                            and Bending. Students will also be introduced to the following Movement
-                                            Concepts that are integrated into the use and development of the locomotor
-                                            and non-locomotor skills: Space (Personal and General Space, Levels,
-                                            Pathways, Directions); Effort (speed); Relationships (to other body parts
-                                            and to others), and the identification of major body parts. Students will
-                                            participate in introductory practice tasks and developmental games
-                                            appropriate to unit level, skills, and concepts. Each lesson will provide
-                                            students with opportunities for success through differentiated learning
-                                            tasks. All unit goals/lesson outcomes are aligned with K-2 Grade Span
-                                            Outcomes (National PE Standards – SHAPE America, 2024) and can be
-                                            implemented in any grade K-2.</li>
-                                        <li><strong>Content Set II</strong> is designed for students in grades K-2 who
-                                            have the
-                                            necessary pre-requisite skills to be successful in this unit. This unit is
-                                            comprised of six lessons that further develop and refine the locomotor
-                                            skills of Jumping, Galloping, Sliding, Running, Hopping, and Skipping and
-                                            the non-locomotor skills of Bending, Stretching, Swinging, and Swaying.
-                                            Students will also further refine and develop the following Movement
-                                            Concepts that are integrated into the use and development of the previous
-                                            and additional locomotor and non-locomotor skills: Space (Personal and
-                                            General Space, Levels, Pathways, Directions); Effort (speed); Relationships
-                                            (to other body parts and to others), and the identification of major body
-                                            parts, all of which were introduced in Level I. In addition, the unit
-                                            introduces the locomotor skill of leaping, the non-locomotor skills of
-                                            twisting and turning, and the aspect of over and under which is included in
-                                            the Movement Concept of Relationships. Students will have opportunity to
-                                            practice, refine, and apply locomotor and non-locomotor skills and movement
-                                            concepts that were previously introduced through practice tasks and
-                                            developmentally appropriate games and activities. Each lesson will provide
-                                            students with opportunities for success through differentiated learning
-                                            tasks. All unit goals/lesson outcomes are aligned with K-2 Grade Span
-                                            Outcomes (National PE Standards – SHAPE America, 2024) and can be
-                                            implemented in any grade K-2, if the students are competent in the
-                                            identified prerequisite skills and concepts. </li>
-                                        <li><strong>Content Set III</strong> further refines the skills
-                                            introduced/refined in
-                                            Content Set I and II and extends the Movement Concept of Relationships as
-                                            students refine their ability to move over and under and be introduced to
-                                            around and through other people and objects using locomotor skills taught in
-                                            Level I and Level II. Each lesson will provide students with opportunities
-                                            for success through differentiated learning tasks and developmentally
-                                            appropriate games and activities. All unit goals/lesson outcomes are aligned
-                                            with K-2 Grade Span Outcomes (National PE Standards – SHAPE America, 2024)
-                                            and can be implemented in any grade K-2, if the students are competent in
-                                            the identified prerequisite skills and concepts.</li>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapsethree" aria-expanded="false"
-                                        aria-controls="collapsethree">
-                                        Rationale for Unit
-                                    </button>
-                                </h2>
-                                <div id="collapsethree" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionAdvanced">
-                                    <div class="accordion-body">
-                                        <li><strong>Developmental appropriateness:</strong> By grade 2 students are
-                                            ready to
-                                            achieve the mature level of all skills included in this unit, except for
-                                            the leap, which is introduced in Content Set II and refined in Content
-                                            Set III. Students are not expected to demonstrate a mature leap until
-                                            grade 3 Donnelly, Mueller, & Gallahue (2017); Couturier, Chepko, &
-                                            Holt/Hale (2014). This unit is developmentally appropriate and aligned
-                                            with the National Standards for grades K-2 and provides a strong
-                                            foundation for skills, movement concepts, and activities that will be
-                                            taught in grades 3-5. </li>
-                                        <li><strong>Foundational Importance of unit:</strong> The skills and concepts
-                                            developed in
-                                            the three content sets of this Locomotor/Non-locomotor unit provide
-                                            foundational skills and movement concepts that will be applied in other K-2
-                                            units such as developmental gymnastics, manipulatives, and rhythms and
-                                            dance. It will also provide the foundation for all 3-5 units as locomotor
-                                            and non-locomotor skills and movement concepts are an integral component of
-                                            all movement activities.</li>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container-fluid">
+        <!-- Title -->
+        <div class="row">
+          <div class="col-12">
+            <h1 class="page-title text-center">
+              Overview of Grades K-2 Locomotor/Non-Locomotor Unit
+            </h1>
+          </div>
         </div>
+
+        <div class="row">
+          <div class="col-12">
+            <!-- Accordion Containers -->
+            <div id="advanced" class="accordion-container active">
+              <div class="accordion" id="accordionAdvanced">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="false"
+                      aria-controls="collapseOne"
+                    >
+                      Statement of Purpose
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionAdvanced"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        The purpose of this unit is to develop locomotor and
+                        non-locomotor skills in grades K-2 that provide the
+                        foundation for units in manipulative skills; rhythms and
+                        dance; etc. The unit is composed of three Content Sets
+                        (6-7 lessons each) and the content of Content Set II &
+                        III reinforces and extends the skills, use of skills,
+                        and movement concepts that were taught in the previous
+                        Content Set/Sets of the Locomotor/Non-Locomotor unit.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Brief description of unit
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionAdvanced"
+                  >
+                    <div class="accordion-body">
+                      <p>
+                        This unit is composed of three progressive Content Sets
+                        of Locomotor and Non-locomotor skills which are also
+                        aligned with appropriate movement concepts. Each level
+                        is aligned with the 2024 National PE standards and
+                        appropriate for grades K-2. Summative and diagnostic
+                        (formative) assessments will be provided for each
+                        identified Unit Goal. The content of each Content Setis
+                        described below:
+                      </p>
+                      <li>
+                        <strong>Content Set I</strong> is designed to
+                        introduce/explore the locomotor skills of Jumping,
+                        Galloping, Sliding, Running, Hopping, and Skipping and
+                        the non-locomotor skills of Bending, Stretching,
+                        Swinging, Swaying, Stretching, and Bending. Students
+                        will also be introduced to the following Movement
+                        Concepts that are integrated into the use and
+                        development of the locomotor and non-locomotor skills:
+                        Space (Personal and General Space, Levels, Pathways,
+                        Directions); Effort (speed); Relationships (to other
+                        body parts and to others), and the identification of
+                        major body parts. Students will participate in
+                        introductory practice tasks and developmental games
+                        appropriate to unit level, skills, and concepts. Each
+                        lesson will provide students with opportunities for
+                        success through differentiated learning tasks. All unit
+                        goals/lesson outcomes are aligned with K-2 Grade Span
+                        Outcomes (National PE Standards – SHAPE America, 2024)
+                        and can be implemented in any grade K-2.
+                      </li>
+                      <li>
+                        <strong>Content Set II</strong> is designed for students
+                        in grades K-2 who have the necessary pre-requisite
+                        skills to be successful in this unit. This unit is
+                        comprised of six lessons that further develop and refine
+                        the locomotor skills of Jumping, Galloping, Sliding,
+                        Running, Hopping, and Skipping and the non-locomotor
+                        skills of Bending, Stretching, Swinging, and Swaying.
+                        Students will also further refine and develop the
+                        following Movement Concepts that are integrated into the
+                        use and development of the previous and additional
+                        locomotor and non-locomotor skills: Space (Personal and
+                        General Space, Levels, Pathways, Directions); Effort
+                        (speed); Relationships (to other body parts and to
+                        others), and the identification of major body parts, all
+                        of which were introduced in Level I. In addition, the
+                        unit introduces the locomotor skill of leaping, the
+                        non-locomotor skills of twisting and turning, and the
+                        aspect of over and under which is included in the
+                        Movement Concept of Relationships. Students will have
+                        opportunity to practice, refine, and apply locomotor and
+                        non-locomotor skills and movement concepts that were
+                        previously introduced through practice tasks and
+                        developmentally appropriate games and activities. Each
+                        lesson will provide students with opportunities for
+                        success through differentiated learning tasks. All unit
+                        goals/lesson outcomes are aligned with K-2 Grade Span
+                        Outcomes (National PE Standards – SHAPE America, 2024)
+                        and can be implemented in any grade K-2, if the students
+                        are competent in the identified prerequisite skills and
+                        concepts.
+                      </li>
+                      <li>
+                        <strong>Content Set III</strong> further refines the
+                        skills introduced/refined in Content Set I and II and
+                        extends the Movement Concept of Relationships as
+                        students refine their ability to move over and under and
+                        be introduced to around and through other people and
+                        objects using locomotor skills taught in Level I and
+                        Level II. Each lesson will provide students with
+                        opportunities for success through differentiated
+                        learning tasks and developmentally appropriate games and
+                        activities. All unit goals/lesson outcomes are aligned
+                        with K-2 Grade Span Outcomes (National PE Standards –
+                        SHAPE America, 2024) and can be implemented in any grade
+                        K-2, if the students are competent in the identified
+                        prerequisite skills and concepts.
+                      </li>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapsethree"
+                      aria-expanded="false"
+                      aria-controls="collapsethree"
+                    >
+                      Rationale for Unit
+                    </button>
+                  </h2>
+                  <div
+                    id="collapsethree"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionAdvanced"
+                  >
+                    <div class="accordion-body">
+                      <li>
+                        <strong>Developmental appropriateness:</strong> By grade
+                        2 students are ready to achieve the mature level of all
+                        skills included in this unit, except for the leap, which
+                        is introduced in Content Set II and refined in Content
+                        Set III. Students are not expected to demonstrate a
+                        mature leap until grade 3 Donnelly, Mueller, & Gallahue
+                        (2017); Couturier, Chepko, & Holt/Hale (2014). This unit
+                        is developmentally appropriate and aligned with the
+                        National Standards for grades K-2 and provides a strong
+                        foundation for skills, movement concepts, and activities
+                        that will be taught in grades 3-5.
+                      </li>
+                      <li>
+                        <strong>Foundational Importance of unit:</strong> The
+                        skills and concepts developed in the three content sets
+                        of this Locomotor/Non-locomotor unit provide
+                        foundational skills and movement concepts that will be
+                        applied in other K-2 units such as developmental
+                        gymnastics, manipulatives, and rhythms and dance. It
+                        will also provide the foundation for all 3-5 units as
+                        locomotor and non-locomotor skills and movement concepts
+                        are an integral component of all movement activities.
+                      </li>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      Grading Resources
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionAdvanced"
+                  >
+                    <div class="accordion-body">
+                      Click the button below to view grading resources:
+                      <br />
+                      <a
+                        href="docs/GRADING RESOURCES.pdf"
+                        target="_blank"
+                        class="btn btn-dark mt-2"
+                      >
+                        Open PDF
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer Section -->
     <footer class="sticky-footer mt-auto py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="footer-logo d-flex align-items-center">
-                <a href="https://us.humankinetics.com/" target="_blank">
-                    <img src="HK logo horizontal 4C.png" alt="Logo" style="height: 40px;">
-                </a>
-            </div>
-            <div class="footer-center-text text-center">
-                <p class="mb-0">PE for Life</p>
-            </div>
-            <div class="footer-right-text">
-                <p class="mb-0">© 2025 Human Kinetics</p>
-            </div>
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="footer-logo d-flex align-items-center">
+          <a href="https://us.humankinetics.com/" target="_blank">
+            <img
+              src="HK logo horizontal 4C.png"
+              alt="Logo"
+              style="height: 40px"
+            />
+          </a>
         </div>
+        <div class="footer-center-text text-center">
+          <p class="mb-0">PE for Life</p>
+        </div>
+        <div class="footer-right-text">
+          <p class="mb-0">© 2025 Human Kinetics</p>
+        </div>
+      </div>
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sidebar = document.querySelector(".sidebar");
-            const toggleButton = document.getElementById("sidebarToggle");
-            const mainContent = document.querySelector(".main-content");
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebar = document.querySelector(".sidebar");
+        const toggleButton = document.getElementById("sidebarToggle");
+        const mainContent = document.querySelector(".main-content");
 
-            toggleButton.addEventListener("click", function () {
-                sidebar.classList.toggle("active");
-                mainContent.classList.toggle("shift-right");
-            });
+        toggleButton.addEventListener("click", function () {
+          sidebar.classList.toggle("active");
+          mainContent.classList.toggle("shift-right");
         });
+      });
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Save open menus to localStorage
-            document.querySelectorAll(".sidebar .collapse").forEach(section => {
-                section.addEventListener("show.bs.collapse", () => {
-                    const openIds = JSON.parse(localStorage.getItem("openMenuIds") || "[]");
-                    if (!openIds.includes(section.id)) {
-                        openIds.push(section.id);
-                        localStorage.setItem("openMenuIds", JSON.stringify(openIds));
-                    }
-                });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Save open menus to localStorage
+        document.querySelectorAll(".sidebar .collapse").forEach((section) => {
+          section.addEventListener("show.bs.collapse", () => {
+            const openIds = JSON.parse(
+              localStorage.getItem("openMenuIds") || "[]"
+            );
+            if (!openIds.includes(section.id)) {
+              openIds.push(section.id);
+              localStorage.setItem("openMenuIds", JSON.stringify(openIds));
+            }
+          });
 
-                section.addEventListener("hide.bs.collapse", () => {
-                    let openIds = JSON.parse(localStorage.getItem("openMenuIds") || "[]");
-                    openIds = openIds.filter(id => id !== section.id);
-                    localStorage.setItem("openMenuIds", JSON.stringify(openIds));
-                });
-            });
-
-            // Restore open menu state from localStorage
-            const savedIds = JSON.parse(localStorage.getItem("openMenuIds") || "[]");
-            savedIds.forEach(id => {
-                const el = document.getElementById(id);
-                if (el && el.classList.contains("collapse")) {
-                    el.classList.add("show");
-                }
-            });
+          section.addEventListener("hide.bs.collapse", () => {
+            let openIds = JSON.parse(
+              localStorage.getItem("openMenuIds") || "[]"
+            );
+            openIds = openIds.filter((id) => id !== section.id);
+            localStorage.setItem("openMenuIds", JSON.stringify(openIds));
+          });
         });
-    </script>
 
+        // Restore open menu state from localStorage
+        const savedIds = JSON.parse(
+          localStorage.getItem("openMenuIds") || "[]"
+        );
+        savedIds.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el && el.classList.contains("collapse")) {
+            el.classList.add("show");
+          }
+        });
+      });
+    </script>
 
     <!-- Bootstrap JS and Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+  </body>
 </html>

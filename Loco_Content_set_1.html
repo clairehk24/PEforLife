@@ -1,1092 +1,1564 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PE for Life</title>
 
-    <!-- Bootstrap 5.3.3 CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Bootstrap 5.3.5 CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Custom Sidebar Styles -->
-    <link href="customstyle.css" rel="stylesheet">
-</head>
+    <link href="customstyle.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <!-- Mobile & Tablet Sidebar Toggle Button -->
-    <button class="btn sidebar-toggle-btn d-lg-none m-2" id="sidebarToggle">☰ Menu</button>
+    <button class="btn sidebar-toggle-btn d-lg-none m-2" id="sidebarToggle">
+      ☰ Menu
+    </button>
 
     <div class="d-flex flex-column flex-shrink-0 p-3 sidebar">
-        <a href="index.html"
-            class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
-            <span class="fs-5 fw-semibold">PE for Life - Home</span>
-        </a>
-        <!-- Elementary Button -->
-        <div class="mb-3">
-            <button class="custom-btn elementary-btn w-100 text-start" data-bs-toggle="collapse"
-                data-bs-target="#elementary-menu" aria-expanded="false">
-                Elementary
+      <a
+        href="index.html"
+        class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"
+      >
+        <span class="fs-5 fw-semibold">PE for Life - Home</span>
+      </a>
+      <!-- Elementary Button -->
+      <div class="mb-3">
+        <button
+          class="custom-btn elementary-btn w-100 text-start"
+          data-bs-toggle="collapse"
+          data-bs-target="#elementary-menu"
+          aria-expanded="false"
+        >
+          Elementary
+        </button>
+        <div class="collapse" id="elementary-menu">
+          <div class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
+              data-bs-toggle="collapse"
+              data-bs-target="#K2-submenu"
+              aria-expanded="false"
+            >
+              K-2
             </button>
-            <div class="collapse" id="elementary-menu">
-                <div class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
-                        data-bs-toggle="collapse" data-bs-target="#K2-submenu" aria-expanded="false">
-                        K-2
-                    </button>
-                    <div class="collapse" id="K2-submenu">
-                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Locomotor/Nonlocomotory-submenu">
-                                    Locomotor/Nonlocomotory
-                                </button>
-                                <div class="collapse" id="Locomotor/Nonlocomotory-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="Loco_Overview.html">Overview</a></li>
-                                        <li><a href="Loco_Content_set_1.html">Content Set I</a></li>
-                                        <li><a href="#">Content Set II</a></li>
-                                        <li><a href="#">Content Set III</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Manipulative-submenu">
-                                    Manipulative
-                                </button>
-                                <div class="collapse" id="Manipulative-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="Loco_Overview.html">Overview</a></li>
-                                        <li><a href="#">Content Set I</a></li>
-                                        <li><a href="#">Content Set II</a></li>
-                                        <li><a href="#">Content Set III</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Rhythm&Dance-submenu">
-                                    Rhythm & Dance
-                                </button>
-                                <div class="collapse" id="Rhythm&Dance-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="Loco_Overview.html">Overview</a></li>
-                                        <li><a href="#">Content Set I</a></li>
-                                        <li><a href="#">Content Set II</a></li>
-                                        <li><a href="#">Content Set III</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#DevelopmentalGymnastics-submenu">
-                                    Developmental Gymnastics
-                                </button>
-                                <div class="collapse" id="DevelopmentalGymnastics-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="Loco_Overview.html">Overview</a></li>
-                                        <li><a href="#">Content Set I</a></li>
-                                        <li><a href="#">Content Set II</a></li>
-                                        <li><a href="#">Content Set III</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mb-1">
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
-                        data-bs-toggle="collapse" data-bs-target="#35-submenu" aria-expanded="false">
-                        3-5
-                    </button>
-                    <div class="collapse" id="35-submenu">
-                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Territory/InvasionGames-submenu">
-                                    Territory/Invasion Games
-                                </button>
-                                <div class="collapse" id="Territory/InvasionGames-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="#">Soccer</a></li>
-                                        <li><a href="basketball.html">Basketball</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Striking/Fielding-submenu">
-                                    Striking/Fielding
-                                </button>
-                                <div class="collapse" id="Striking/Fielding-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="#">Striking Activities</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Net/Wall-submenu">
-                                    Net/Wall
-                                </button>
-                                <div class="collapse" id="Net/Wall-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="#">Volleying</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#TargetGames-submenu">
-                                    Target Games
-                                </button>
-                                <div class="collapse" id="TargetGames-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="#">Target Activities</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#Rhythm&Dance2-submenu">
-                                    Rhythm & Dance
-                                </button>
-                                <div class="collapse" id="Rhythm&Dance2-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="#">Spaceholder</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="btn btn-toggle d-inline-flex align-items-center border-0"
-                                    data-bs-toggle="collapse" data-bs-target="#DevelopmentalGymnastics2-submenu">
-                                    Developmental Gymnastics
-                                </button>
-                                <div class="collapse" id="DevelopmentalGymnastics2-submenu">
-                                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                        <li><a href="#">Spaceholder</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="collapse" id="K2-submenu">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Locomotor/Nonlocomotory-submenu"
+                  >
+                    Locomotor/Nonlocomotory
+                  </button>
+                  <div class="collapse" id="Locomotor/Nonlocomotory-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="Loco_Overview.html">Overview</a></li>
+                      <li>
+                        <a href="Loco_Content_set_1.html">Content Set I</a>
+                      </li>
+                      <li><a href="#">Content Set II</a></li>
+                      <li><a href="#">Content Set III</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Manipulative-submenu"
+                  >
+                    Manipulative
+                  </button>
+                  <div class="collapse" id="Manipulative-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="Loco_Overview.html">Overview</a></li>
+                      <li><a href="#">Content Set I</a></li>
+                      <li><a href="#">Content Set II</a></li>
+                      <li><a href="#">Content Set III</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Rhythm&Dance-submenu"
+                  >
+                    Rhythm [&] Dance
+                  </button>
+                  <div class="collapse" id="Rhythm&Dance-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="Loco_Overview.html">Overview</a></li>
+                      <li><a href="#">Content Set I</a></li>
+                      <li><a href="#">Content Set II</a></li>
+                      <li><a href="#">Content Set III</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#DevelopmentalGymnastics-submenu"
+                  >
+                    Developmental Gymnastics
+                  </button>
+                  <div class="collapse" id="DevelopmentalGymnastics-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="Loco_Overview.html">Overview</a></li>
+                      <li><a href="#">Content Set I</a></li>
+                      <li><a href="#">Content Set II</a></li>
+                      <li><a href="#">Content Set III</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </div>
-        </div>
-        <!-- Secondary Button -->
-        <div class="mb-3">
-            <button class="custom-btn secondary-btn w-100 text-start" data-bs-toggle="collapse"
-                data-bs-target="#secondary-menu" aria-expanded="false">
-                Secondary
+          </div>
+          <div class="mb-1">
+            <button
+              class="btn btn-toggle d-inline-flex align-items-center rounded border-0"
+              data-bs-toggle="collapse"
+              data-bs-target="#35-submenu"
+              aria-expanded="false"
+            >
+              3-5
             </button>
-            <div class="collapse" id="secondary-menu">
-                <ul class="btn-toggle-nav list-unstyled fw-normal ps-3 pt-2 pb-1 small">
-                    <li><a href="#">Territory/Invasion Games </a></li>
-                    <li><a href="#">Striking/Fielding</a></li>
-                    <li><a href="#">Net/Wall</a></li>
-                    <li><a href="#">Target Games</a></li>
-                    <li><a href="#">Lifetime/Leisure & Wellness</a></li>
-                    <li><a href="#">Rhythm & Dance</a></li>
-                    <li><a href="#">Adventure/Outdoor Education</a></li>
-                </ul>
+            <div class="collapse" id="35-submenu">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Territory/InvasionGames-submenu"
+                  >
+                    Territory/Invasion Games
+                  </button>
+                  <div class="collapse" id="Territory/InvasionGames-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="#">Soccer</a></li>
+                      <li><a href="basketball.html">Basketball</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Striking/Fielding-submenu"
+                  >
+                    Striking/Fielding
+                  </button>
+                  <div class="collapse" id="Striking/Fielding-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="#">Striking Activities</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Net/Wall-submenu"
+                  >
+                    Net/Wall
+                  </button>
+                  <div class="collapse" id="Net/Wall-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="#">Volleying</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#TargetGames-submenu"
+                  >
+                    Target Games
+                  </button>
+                  <div class="collapse" id="TargetGames-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="#">Target Activities</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#Rhythm&Dance2-submenu"
+                  >
+                    Rhythm [&] Dance
+                  </button>
+                  <div class="collapse" id="Rhythm&Dance2-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="#">Spaceholder</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="btn btn-toggle d-inline-flex align-items-center border-0"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#DevelopmentalGymnastics2-submenu"
+                  >
+                    Developmental Gymnastics
+                  </button>
+                  <div class="collapse" id="DevelopmentalGymnastics2-submenu">
+                    <ul
+                      class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+                    >
+                      <li><a href="#">Spaceholder</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
-        <!-- Resources Button -->
-        <div class="mb-3">
-            <button class="custom-btn resources-btn w-100 text-start" data-bs-toggle="collapse"
-                data-bs-target="#resources-menu" aria-expanded="false">
-                Resources
-            </button>
-            <div class="collapse" id="resources-menu">
-                <ul class="btn-toggle-nav list-unstyled fw-normal ps-3 pt-2 pb-1 small">
-                    <li><a href="#">Warmups/cooldowns</a></li>
-                    <li><a href="#">Other potential resources</a></li>
-                </ul>
-            </div>
+      </div>
+      <!-- Secondary Button -->
+      <div class="mb-3">
+        <button
+          class="custom-btn secondary-btn w-100 text-start"
+          data-bs-toggle="collapse"
+          data-bs-target="#secondary-menu"
+          aria-expanded="false"
+        >
+          Secondary
+        </button>
+        <div class="collapse" id="secondary-menu">
+          <ul
+            class="btn-toggle-nav list-unstyled fw-normal ps-3 pt-2 pb-1 small"
+          >
+            <li><a href="#">Territory/Invasion Games </a></li>
+            <li><a href="#">Striking/Fielding</a></li>
+            <li><a href="#">Net/Wall</a></li>
+            <li><a href="#">Target Games</a></li>
+            <li><a href="#">Lifetime/Leisure [&] Wellness</a></li>
+            <li><a href="#">Rhythm [&] Dance</a></li>
+            <li><a href="#">Adventure/Outdoor Education</a></li>
+          </ul>
         </div>
+      </div>
+      <!-- Resources Button -->
+      <div class="mb-3">
+        <button
+          class="custom-btn resources-btn w-100 text-start"
+          data-bs-toggle="collapse"
+          data-bs-target="#resources-menu"
+          aria-expanded="false"
+        >
+          Resources
+        </button>
+        <div class="collapse" id="resources-menu">
+          <ul
+            class="btn-toggle-nav list-unstyled fw-normal ps-3 pt-2 pb-1 small"
+          >
+            <li><a href="#">Warmups/cooldowns</a></li>
+            <li><a href="#">Other potential resources</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <!-- Main Content Area -->
     <div class="main-content">
-        <div class="container-fluid">
-            <!-- Title -->
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="page-title text-center">Locomotor and Nonlocomotor Unit</h1>
-                    <h1 class="page-title text-center">Content Set I</h1>
-                </div>
-            </div>
-
-            <!-- Content Area -->
-            <div class="row">
-                <div class="col-12">
-                    <!-- Accordion Containers -->
-                    <div id="advanced" class="accordion-container active">
-                        <div class="accordion" id="accordionAdvanced">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        Essential Questions
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionAdvanced">
-                                    <div class="accordion-body">
-                                        <li>EQ1: How do I keep balance when jumping galloping, jogging, sliding, and
-                                            skipping?</li>
-                                        <li>EQ2: What pathways can I move in?</li>
-                                        <li>EQ3: What shapes can I make with my body?</li>
-                                        <Li>EQ4: What are my body parts?</Li>
-                                        <li>EQ5: What is the difference between stretching my body and curling my body?
-                                        </li>
-                                        <li>EQ6: What is the difference between personal and general space?</li>
-                                        <Li>EQ7: What do I need to do to change speeds when moving?</Li>
-                                        <li>EQ8: Why is it important to follow directions?</li>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Skills
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionAdvanced">
-                                    <div class="accordion-body">
-                                        <p>Prerequisite skills/movement concepts necessary for success:</p>
-                                        <ul>
-                                            <li><strong>Concepts</strong> – NA</li>
-                                            <li><strong>Skills</strong>
-                                                <ol>
-                                                    <li>Walking</li>
-                                                    <li>Crawling</li>
-                                                    <li>Creeping</li>
-                                                </ol>
-                                            </li>
-                                            <li><strong>Skills introduced/refined in unit</strong>
-                                                <ol>
-                                                    <li>Hop</li>
-                                                    <li>Jump</li>
-                                                    <li>Gallop</li>
-                                                    <li>Side</li>
-                                                    <li>Jog/run</li>
-                                                    <li>Bending</li>
-                                                    <li>Stretching</li>
-                                                </ol>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        Movement Concepts
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionAdvanced">
-                                    <div class="accordion-body">
-                                        <p>Unit Movement Concept Focus:</p>
-                                        <ul>
-                                            <li><strong>Space</strong>
-                                                <ol>
-                                                    <li>Personal and General Space</li>
-                                                    <li>Pathways (Curved, Straight, Zig-Zag)</li>
-                                                    <li>Directions</li>
-                                                    <li>Range</li>
-                                                    <li>Levels</li>
-                                                    <li>Speed</li>
-                                                </ol>
-                                            </li>
-                                            <li><strong>Body Awareness</strong>
-                                                <ol>
-                                                    <li>Identification of body parts</li>
-                                                    <li>Locomotor and Non-Locomotor skills</li>
-                                                    <ol type="a">
-                                                        <li>Force</li>
-                                                    </ol>
-                                                </ol>
-                                            </li>
-                                            <li><strong>Alignment with Locomotor/Non-Locomotor/Manipulative
-                                                    Skills/Rhythmic Activities/Developmental Gymnastics</strong>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour">
-                                        Standards & Learning Outcomes
-                                    </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionAdvanced">
-                                    <div class="accordion-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered table-striped table-light">
-                                                <colgroup>
-                                                    <col style="min-width: 120px;"> <!-- National Standard -->
-                                                    <col style="min-width: 190px;">
-                                                    <!-- PreK – 2 Grade Span Learning Indicator -->
-                                                    <col style="min-width: 220px; max-width: 300px;">
-                                                    <!-- Unit Goals -->
-                                                    <col style="min-width: 250px;"> <!-- Assessment -->
-                                                </colgroup>
-                                                <thead class="table-active">
-                                                    <tr>
-                                                        <th class="text-center">National Standard</th>
-                                                        <th class="text-center">PreK – 2 Grade Span Learning Indicator
-                                                        </th>
-                                                        <th class="text-center">Unit Goals</th>
-                                                        <th class="text-center">Assessment</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="text-center">1</td>
-                                                        <td class="text-center">1.2.1</td>
-                                                        <td>Students will demonstrate specified essential elements of
-                                                            the hop, skip, gallop, horizontal and vertical jump, and
-                                                            run. (Essential elements for each skill are specified in the
-                                                            diagnostic and summative assessments)</td>
-                                                        <td>Diagnostic Assessment (formative): Days 3,4<br>Summative
-                                                            Assessment: Days: 6, 7</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">1</td>
-                                                        <td class="text-center">1.2.1</td>
-                                                        <td>Students can demonstrate understanding of the difference
-                                                            between personal and general space through appropriate
-                                                            movement in a variety of activities.</td>
-                                                        <td>Diagnostic Assessment (formative) Day: 3<br>Summative
-                                                            Assessment Day: 7</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">1</td>
-                                                        <td class="text-center">1.2.1</td>
-                                                        <td>Students can move in the straight, curved, and zig-zag
-                                                            pathways in a variety of activities.</td>
-                                                        <td>Diagnostic Assessment (formative) Day:<br>Summative
-                                                            Assessment Day: 7</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">1</td>
-                                                        <td class="text-center">1.2.1</td>
-                                                        <td>Students will be able to change directions, speed, etc.
-                                                            while performing a variety of locomotor skills.</td>
-                                                        <td>Summative Assessment Day: 4</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">1</td>
-                                                        <td class="text-center">1.2.2</td>
-                                                        <td>Students will demonstrate the ability to jump and land with
-                                                            balance</td>
-                                                        <td>Summative Assessment Day: 6</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">1</td>
-                                                        <td class="text-center">1.2.4</td>
-                                                        <td>Students can form tall and flat body shapes on teacher
-                                                            direction during selected activities.</td>
-                                                        <td>Diagnostic Assessment (formative) Day: 5<br>Summative
-                                                            Assessment Day: 5</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">1</td>
-                                                        <td class="text-center">1.2.4</td>
-                                                        <td>Students demonstrate a change of levels when bending and
-                                                            stretching during selected activities.</td>
-                                                        <td>Diagnostic Assessment (formative) Day: 3<br>Summative
-                                                            Assessment Day: 7</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">1</td>
-                                                        <td class="text-center">1.2.4</td>
-                                                        <td>Students will be able to identify by touching or pointing to
-                                                            the following body parts: Head, Shoulder, Knees, Toes,
-                                                            Ankles, Hips, Wrist, and Elbow</td>
-                                                        <td>Diagnostic Assessment (formative) Day: 1<br>Summative
-                                                            Assessment Day: 2</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">1</td>
-                                                        <td class="text-center">1.2.4</td>
-                                                        <td>Students will be able to demonstrate a variety of
-                                                            non-locomotor skills during selected activities.</td>
-                                                        <td>Diagnostic Assessment (formative) Day 3<br>Summative
-                                                            Assessment Day: 7</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">3</td>
-                                                        <td class="text-center">3.2.4</td>
-                                                        <td>Students will demonstrate the ability to follow directions
-                                                            in a variety of group activities</td>
-                                                        <td>Diagnostic Assessments (formative) Day: 1<br>Summative
-                                                            Assessment Day: 7</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFive" aria-expanded="false"
-                                        aria-controls="collapseFive">
-                                        Resources & Materials Needed
-                                    </button>
-                                </h2>
-                                <div id="collapseFive" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionAdvanced">
-                                    <div class="accordion-body">
-                                        <div><strong>Equipment:</strong></div>
-                                        <ul>
-                                            <li>Hula Hoops (1 per student)</li>
-                                            <li>Long Ropes (1 per student or 1 rope per 2-3 students)</li>
-                                            <li>2-3 sets of various height hurdles (6 inch, 8 inch, 12 inch, 18 inch)
-                                            </li>
-                                            <li>10-12 Small Cones</li>
-                                            <Li>4-8 Large Cones</Li>
-                                            <li>15-20 Poly Spots</li>
-                                            <li>Equipment to make obstacles </li>
-                                        </ul>
-                                        <div><strong>Teaching Materials/Resources:</strong></div>
-                                        <ul>
-                                            <li>Music appropriate to grade level/activity (see resources)</li>
-                                            <li>Speakers (Bluetooth or other)</li>
-                                            <li>Cues posters</li>
-                                            <li>Skills posters</li>
-                                        </ul>
-                                        <div><strong>Facilities/Space:</strong> Gymnasium</div>
-                                        <div><strong>Time:</strong> 40 minutues</div>
-                                        <div><strong>Teacher Expertise/Training/Certification:</strong></div>
-                                        <ul>
-                                            <li>Knowledge of motor development</li>
-                                            <li>Ability to identify and demonstrate fundamental locomotor and
-                                                non-locomotor skills</li>
-                                            <li>Understanding of movement concepts and relationship to performance of
-                                                locomotor and non-locomotor skills </li>
-                                            <li>Knowledge of developmentally appropriate activities and games.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                        Block Plan
-                                    </button>
-                                </h2>
-                                <div id="collapseSix" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionAdvanced">
-                                    <div class="accordion-body">
-                                        <div>Click the button below to view the suggested teaching sequence (Block
-                                            Plan):
-                                        </div>
-                                        <a href="docs/Locomotor_Nonlocomotor_Content_Set_1_BLOCK_PLAN.pdf"
-                                            target="_blank" class="btn btn-dark mt-2">Open
-                                            PDF</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseSeven" aria-expanded="false"
-                                        aria-controls="collapseSeven">
-                                        Lesson Plan
-                                    </button>
-                                </h2>
-                                <div id="collapseSeven" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionAdvanced">
-                                    <div class="accordion-body">
-                                        <div class="accordion" id="lessonPlanDays">
-
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingDay1">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseDay1"
-                                                        aria-expanded="false" aria-controls="collapseDay1">
-                                                        Day 1:
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseDay1" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingDay1" data-bs-parent="#lessonPlanDays">
-                                                    <div class="accordion-body" role="region"
-                                                        aria-labelledby="headingDay1">
-                                                        <h2>Lesson Outcomes/Objectives</h2>
-                                                        <ol>
-                                                            <li>Students will stretch to make their bodies as tall as
-                                                                possible when directed by the teacher (S1 – 1.24)</li>
-                                                            <li>Students will explore personal space within a hoop by
-                                                                making their bodies as flat as possible (S1 – 1.2.4)
-                                                            </li>
-                                                            <li>Students will demonstrate a change in levels while
-                                                                bending and stretching (S1 – 1.2.4)</li>
-                                                            <li>Students will correctly indicate their head, knees,
-                                                                shoulders, and toes during the “Heads, Shoulders, Knees,
-                                                                and Toes” activity (NA)</li>
-                                                            <li>Students will follow the prompts of the “Freeze Song”
-                                                                activity (S3 – 3.2.4)</li>
-                                                        </ol>
-
-                                                        <h3>Equipment</h3>
-                                                        <ul>
-                                                            <li>Hula Hoops (1 per student)</li>
-                                                        </ul>
-
-                                                        <h3>Teaching Resources</h3>
-                                                        <ul>
-                                                            <li>“Freeze Song” – Mr. Heath</li>
-                                                            <li>“Head, Shoulders, Knees, and Toes” Song</li>
-                                                        </ul>
-
-                                                        <h3>Lesson Activities</h3>
-                                                        <table class="table table-bordered" role="table">
-                                                            <thead>
-                                                                <tr class="table-active">
-                                                                    <th scope="col">Time</th>
-                                                                    <th scope="col">Activity</th>
-                                                                    <th scope="col">Description</th>
-                                                                    <th scope="col">Diagram</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>5 min</td>
-                                                                    <td>Instant Activity: “Freeze Song” (Mr. Heath
-                                                                        Album: Seriously Silly iTunes)</td>
-                                                                    <td>
-                                                                        <ul>
-                                                                            <li>Students are instructed to enter gym and
-                                                                                find a hoop and stand in that hoop <br>
-                                                                            </li>
-                                                                            -If 2 students go to the same hoop – both of
-                                                                            you should find a new hoop<br>
-                                                                            -If you are having trouble finding a hoop –
-                                                                            you can come to the “Help Station” – which
-                                                                            is me!<br>
-                                                                            <li>Students each have a hula-hoop, that is
-                                                                                placed on the floor.</li>
-                                                                            <li>Students will stand in the hoop
-                                                                                (representing self-space) and follow
-                                                                                directions of the song.</li>
-                                                                            <li>The song uses the cue “Freeze” for
-                                                                                students to stop the previous action.
-                                                                            </li>
-                                                                            <li>“Unfreeze” is the cue for students to
-                                                                                resume moving.</li>
-                                                                        </ul>
-                                                                    </td>
-                                                                    <td rowspan="5" style="vertical-align: top; text-align: center;">
-                                                                        <a href="#" data-bs-toggle="modal" data-bs-target="#pdfModal">
-                                                                            Content Set I: Day One Diagram
-                                                                        </a>
-                                                                    </td>
-                                                                    <!-- Modal -->
-                                                                    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
-                                                                        <div class="modal-dialog modal-xl modal-dialog-centered">
-                                                                        <div class="modal-content">
-                                                                            <div class="modal-header">
-                                                                            <h5 class="modal-title" id="pdfModalLabel">Content Set I: Day One Diagram</h5>
-                                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                            </div>
-                                                                            <div class="modal-body" style="height: 80vh;">
-                                                                            <iframe src="docs\Content Set 1 Day 1 Diagram.pdf" width="100%" height="100%" style="border: none;"></iframe>
-                                                                            </div>
-                                                                        </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td></td>
-                                                                    <td><em>Transition</em></td>
-                                                                    <td>
-                                                                        <ul>
-                                                                            <li>At completion of Instant Activity – on
-                                                                                “move signal” students will leave hoops
-                                                                                on the floor and walk to circle in
-                                                                                center of the gymnasium (spots could be
-                                                                                used as well)</li>
-                                                                            <li>Students sit on lines of circle or spots
-                                                                            </li>
-                                                                        </ul>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td></td>
-                                                                    <td>Set Induction (Introduction to Lesson)</td>
-                                                                    <td>
-                                                                        <ul>
-                                                                            <li>Students are sitting in ½ or ¾ circle
-                                                                            </li>
-                                                                            <li>Set Induction:
-                                                                                <ul>
-                                                                                    <li>Quick reminder – what do you do
-                                                                                        when you hear me (or the song)
-                                                                                        say “Freeze”?</li>
-                                                                                    <li>Today we are going to learn
-                                                                                        about some of our major body
-                                                                                        parts: our Head, Shoulders,
-                                                                                        Knees and Toes and what we can
-                                                                                        do with them:
-                                                                                        <ul>
-                                                                                            <li>Stretch – make our body
-                                                                                                as tall as possible</li>
-                                                                                            <li>Bend</li>
-                                                                                            <li>Make our body look like
-                                                                                                a pancake (flat)</li>
-                                                                                            <li>What level are and what
-                                                                                                it means to change
-                                                                                                levels</li>
-                                                                                        </ul>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </li>
-                                                                            <li>The first thing we are going to do is
-                                                                                listen to a song and do what the song
-                                                                                says – do the best that you can.</li>
-                                                                        </ul>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td></td>
-                                                                    <td><em>Transition</em></td>
-                                                                    <td>
-                                                                        <ul>
-                                                                            <li>On my signal – “GO” students will get up
-                                                                                and stand in a hoop</li>
-                                                                            <li>If 2 students go to the same hoop – both
-                                                                                of you should find a new hoop</li>
-                                                                            <li>If you are having trouble finding a hoop
-                                                                                – you can come to the “Help Station” –
-                                                                                which is me!</li>
-                                                                            <li>Walking – “Go”</li>
-                                                                        </ul>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>10 min</td>
-                                                                    <td>Pre-Assessment:<br> Body Parts: “Head,
-                                                                        Shoulders, Knees, and Toes” - iTunes</td>
-                                                                    <td>
-                                                                        “Head, Shoulders, Knees, & Toes” <br>
-                                                                        <ul>
-                                                                            <li>Students stand in Hula Hoop</li>
-                                                                            <li>Students will stay in hoop while
-                                                                                following directions of song and
-                                                                                touching their heads, shoulder, knees,
-                                                                                and toes.</li>
-                                                                            <li>The song helps students learn body parts
-                                                                                and practice changing levels while
-                                                                                listening to and following movement
-                                                                                cues. </li>
-                                                                        </ul>
-                                                                        <strong>Pre-Assessment:</strong> using the
-                                                                        recording form, teacher indicates when a student
-                                                                        cannot correctly touch one of the body parts
-                                                                        identified in the song.<br>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td></td>
-                                                                    <td><em>Transition</em></td>
-                                                                    <td>
-                                                                        <ul>
-                                                                            <li>At completion of Pre-Assessment – and on
-                                                                                “Freeze” signal – students stop and
-                                                                                wait for further instructions.
-                                                                            </li>
-                                                                            <li>On the “Go” signal – students are asked
-                                                                                to sit in their hoops to listen for the
-                                                                                instructions for the first learning
-                                                                                activity</li>
-                                                                        </ul>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="table-active" colspan="4"
-                                                                        style="text-align: center; font-weight: bold;">
-                                                                        Skill Concept Development (Learning Progression)
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                <tr>
-                                                                    <td>20 min</td>
-                                                                    <td>Introduction to:<br>
-                                                                        <ul>
-                                                                            <li>Personal Space</li>
-                                                                            <li>Bending and Stretching</li>
-                                                                            <li>Body Parts: Heads, Shoulders, Knees,
-                                                                                Toes</li>
-                                                                        </ul>
-                                                                    </td>
-                                                                    <td>All students are standing in hoops spread out in
-                                                                        general space. Music can be used as stop/start
-                                                                        signals. Teach:<br>
-                                                                        <ol>
-                                                                            <li>Difference between personal and general
-                                                                                space</li>
-                                                                            <li>Exploration of personal space (hoop)
-                                                                            </li>
-                                                                            <ol type="a"> <!-- Letters -->
-                                                                                <li>Hold arms out straight to side and
-                                                                                    in front</li>
-                                                                                <ol type="i"> <!-- Roman numerals -->
-                                                                                    <li>Can you touch anyone else?</li>
-                                                                                    <li>How close are you to someone
-                                                                                        else?</li>
-                                                                                </ol>
-                                                                                <li>Fill the hoop with your body</li>
-                                                                            </ol>
-                                                                            <li>Exploration of personal space and range
-                                                                            </li>
-                                                                            <ol type="a"> <!-- Letters -->
-                                                                                <li>Tall – Small</li>
-                                                                                <li>Wide – Flat</li>
-                                                                            </ol>
-                                                                        </ol>
-                                                                        Introduce Bending and Stretching while in
-                                                                        Personal Space (students in hoops)<br>
-                                                                        <ol>
-                                                                            <li>Teacher Demonstration of skills
-                                                                                (students repeat)</li>
-                                                                            <ol type="a"> <!-- Letters -->
-                                                                                <li>Stretch – full extension of body –
-                                                                                    arms extended above head</li>
-                                                                                <li>Bend</li>
-                                                                                <ol type="i"> <!-- Roman numerals -->
-                                                                                    <li>At elbow</li>
-                                                                                    <li>At knee</li>
-                                                                                    <li>At the waist</li>
-                                                                                </ol>
-                                                                            </ol>
-                                                                            <li>On signal – students follow prompts such
-                                                                                as:</li>
-                                                                            <ol type="a"> <!-- Letters -->
-                                                                                <li>Make yourself as tall as you cant
-                                                                                </li>
-                                                                                <li>Make yourself as flat and wide as
-                                                                                    you can</li>
-                                                                                <li>Bend body part</li>
-                                                                            </ol>
-                                                                            <li>Introduction to Body Parts (students in
-                                                                                hoops)</li>
-                                                                            <ol type="a"> <!-- Letters -->
-                                                                                <li>Mimic teacher touching and naming
-                                                                                    body parts: Head – Shoulders – Knees
-                                                                                    – Toes </li>
-                                                                                <li>Mimic teacher touching and naming
-                                                                                    body parts: Elbows – Ankles – Hips –
-                                                                                    Wrists</li>
-                                                                            </ol>
-                                                                        </ol>
-                                                                    </td>
-                                                                    <td rowspan="2"
-                                                                        style="vertical-align: top; text-align: center;">
-                                                                        Use Content Set I Day One Diagram
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td></td>
-                                                                    <td><em>Transition</em></td>
-                                                                    <td>
-                                                                        <ul>
-                                                                            <li>On “Freeze” signal – stop and stand in
-                                                                                hoop.</li>
-                                                                            <li>Listen to directions for “Head,
-                                                                                Shoulders, Knees, and Toes</li>
-                                                                        </ul>
-                                                                    </td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="table-active" colspan="4"
-                                                                        style="text-align: center; font-weight: bold;">
-                                                                        Application Activity/Assessment
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>10 min</td>
-                                                                    <td>“Head, Shoulder, Knees & Toes” Song Activity/
-                                                                        Assessment</td>
-                                                                    <td>
-                                                                        “Head, Shoulders, Knees, & Toes”<br>
-                                                                        <ul>
-                                                                            <li>Students stand in Hula Hoop</li>
-                                                                            <li>Students will stay in hoop while
-                                                                                following directions of song and
-                                                                                touching their heads, shoulder, knees,
-                                                                                and toes.</li>
-                                                                        </ul>
-                                                                        <strong>Assessment:</strong> using the recording
-                                                                        form, teacher indicates when a student cannot
-                                                                        correctly touch one of the body parts identified
-                                                                        in the song. Compare results from
-                                                                        Pre-assessments
-                                                                    </td>
-                                                                    <td rowspan="3"
-                                                                        style="vertical-align: top; text-align: center;">
-                                                                        Use Content Set I Day One Diagram
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td></td>
-                                                                    <td><em>Transition</em></td>
-                                                                    <td>
-                                                                        <ul>
-                                                                            <li>On signal – students bring hula hoops to
-                                                                                designated area </li>
-                                                                            <li>Walk to circle in center of the
-                                                                                gymnasium (spots could be used as well)
-                                                                            </li>
-                                                                            <li>Students sit on lines of circle or spots
-                                                                                for Closure</li>
-                                                                        </ul>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td></td>
-                                                                    <td>Closure</td>
-                                                                    <td>Check for Understanding Questions:<br>
-                                                                        <ul>
-                                                                            <li>Can you touch your head?, your
-                                                                                shoulders? Your knees?, your toes?</li>
-                                                                            <li>Can everyone show me how to check for
-                                                                                your personal space? (reach arms out)
-                                                                            </li>
-                                                                            <li>Who can bend their elbow? Your knee?
-                                                                                Your waist?</li>
-                                                                            <li>Who can show me a High level?</li>
-                                                                            <li>Who can show me a low level?</li>
-                                                                        </ul>
-                                                                        Next time we will practice our Head, Shoulders,
-                                                                        Knees, and Toes and learn a few more body parts
-                                                                        and ways our body can move.<br>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingDay2">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseDay2"
-                                                        aria-expanded="false" aria-controls="collapseDay2">
-                                                        Day 2:
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseDay2" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingDay2" data-bs-parent="#lessonPlanDays">
-                                                    <div class="accordion-body">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingDay3">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseDay3"
-                                                        aria-expanded="false" aria-controls="collapseDay3">
-                                                        Day 3:
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseDay3" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingDay3" data-bs-parent="#lessonPlanDays">
-                                                    <div class="accordion-body">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingDay4">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseDay4"
-                                                        aria-expanded="false" aria-controls="collapseDay4">
-                                                        Day 4:
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseDay4" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingDay4" data-bs-parent="#lessonPlanDays">
-                                                    <div class="accordion-body">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingDay5">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseDay5"
-                                                        aria-expanded="false" aria-controls="collapseDay5">
-                                                        Day 5:
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseDay5" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingDay5" data-bs-parent="#lessonPlanDays">
-                                                    <div class="accordion-body">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingDay6">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseDay6"
-                                                        aria-expanded="false" aria-controls="collapseDay6">
-                                                        Day 6:
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseDay6" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingDay6" data-bs-parent="#lessonPlanDays">
-                                                    <div class="accordion-body">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingDay7">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseDay7"
-                                                        aria-expanded="false" aria-controls="collapseDay7">
-                                                        Day 7:
-                                                    </button>
-                                                </h2>
-                                                <div id="collapseDay7" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingDay7" data-bs-parent="#lessonPlanDays">
-                                                    <div class="accordion-body">
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseEight" aria-expanded="false"
-                                        aria-controls="collapseEight">
-                                        Assessments & Grading Criteria
-                                    </button>
-                                </h2>
-                                <div id="collapseEight" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionAdvanced">
-                                    <div class="accordion-body">
-                                        <div>Place holder</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseNine" aria-expanded="false"
-                                        aria-controls="collapseNine">
-                                        Teacher Resources & At Home Activities
-                                    </button>
-                                </h2>
-                                <div id="collapseNine" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionAdvanced">
-                                    <div class="accordion-body">
-                                        <div>Click the button below to view additional teacher resources and suggested
-                                            at home activities:
-                                        </div>
-                                        <a href="docs/Locomotor_nonlocomotor_Content_Set_1_Resources_AtHomeActivities.pdf"
-                                            target="_blank" class="btn btn-dark mt-2">Open
-                                            PDF</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container-fluid">
+        <!-- Title -->
+        <div class="row">
+          <div class="col-12">
+            <h1 class="page-title text-center">
+              Locomotor and Nonlocomotor Unit
+            </h1>
+            <h1 class="page-title text-center">Content Set I</h1>
+          </div>
         </div>
+
+        <!-- Content Area -->
+        <div class="row">
+          <div class="col-12">
+            <!-- Accordion Containers -->
+            <div class="accordion" id="mainAccordion">
+              <!-- 1. Essential Questions -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse1"
+                  >
+                    Essential Questions
+                  </button>
+                </h2>
+                <div
+                  id="collapse1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#mainAccordion"
+                >
+                  <div class="accordion-body">
+                    <li>
+                      EQ1: How do I keep balance when jumping galloping,
+                      jogging, sliding, and skippi
+                    </li>
+                    <li>EQ2: What pathways can I move in?</li>
+                    <li>EQ3: What shapes can I make with my body?</li>
+                    <li>EQ4: What are my body parts?</li>
+                    <li>
+                      EQ5: What is the difference between stretching my body and
+                      curling my body?
+                    </li>
+                    <li>
+                      EQ6: What is the difference between personal and general
+                      space?
+                    </li>
+                    <li>
+                      EQ7: What do I need to do to change speeds when moving?
+                    </li>
+                    <li>EQ8: Why is it important to follow directions?</li>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Skills -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse2"
+                  >
+                    Skills
+                  </button>
+                </h2>
+                <div
+                  id="collapse2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#mainAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Prerequisite skills/movement concepts necessary for
+                      success:
+                    </p>
+                    <ul>
+                      <li><strong>Concepts</strong> – NA</li>
+                      <li>
+                        <strong>Skills</strong>
+                        <ol>
+                          <li>Walking</li>
+                          <li>Crawling</li>
+                          <li>Creeping</li>
+                        </ol>
+                      </li>
+                      <li>
+                        <strong>Skills introduced/refined in unit</strong>
+                        <ol>
+                          <li>Hop</li>
+                          <li>Jump</li>
+                          <li>Gallop</li>
+                          <li>Side</li>
+                          <li>Jog/run</li>
+                          <li>Bending</li>
+                          <li>Stretching</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Movement Concepts -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse3"
+                  >
+                    Movement Concepts
+                  </button>
+                </h2>
+                <div
+                  id="collapse3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#mainAccordion"
+                >
+                  <div class="accordion-body">
+                    <p>Unit Movement Concept Focus:</p>
+                    <ul>
+                      <li>
+                        <strong>Space</strong>
+                        <ol>
+                          <li>Personal and General Space</li>
+                          <li>Pathways (Curved, Straight, Zig-Zag)</li>
+                          <li>Directions</li>
+                          <li>Range</li>
+                          <li>Levels</li>
+                          <li>Speed</li>
+                        </ol>
+                      </li>
+                      <li>
+                        <strong>Body Awareness</strong>
+                        <ol>
+                          <li>Identification of body parts</li>
+                          <li>Locomotor and Non-Locomotor skills</li>
+                          <ol type="a">
+                            <li>Force</li>
+                          </ol>
+                        </ol>
+                      </li>
+                      <li>
+                        <strong
+                          >Alignment with Locomotor/Non-Locomotor/Manipulative
+                          Skills/Rhythmic Activities/Developmental
+                          Gymnastics</strong
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Standards & Learning Outcomes -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse4"
+                  >
+                    Standards & Learning Outcomes
+                  </button>
+                </h2>
+                <div
+                  id="collapse4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#mainAccordion"
+                >
+                  <div class="accordion-body">
+                    <div class="table-responsive">
+                      <table
+                        class="table table-bordered table-striped table-light"
+                      >
+                        <colgroup>
+                          <col style="min-width: 120px" />
+                          <col style="min-width: 190px" />
+                          <col style="min-width: 220px; max-width: 300px" />
+                          <col style="min-width: 250px" />
+                        </colgroup>
+                        <thead class="table-active">
+                          <tr>
+                            <th class="text-center">National Standard</th>
+                            <th class="text-center">
+                              PreK – 2 Grade Span Learning Indicator
+                            </th>
+                            <th class="text-center">Unit Goals</th>
+                            <th class="text-center">Assessment</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1.2.1</td>
+                            <td>
+                              Students will demonstrate specified essential
+                              elements of the hop, skip, gallop, horizontal and
+                              vertical jump, and run. (Essential elements for
+                              each skill are specified in the diagnostic and
+                              summative assessments)
+                            </td>
+                            <td>
+                              Diagnostic Assessment (formative): Days 3,4<br />Summative
+                              Assessment: Days: 6, 7
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1.2.1</td>
+                            <td>
+                              Students can demonstrate understanding of the
+                              difference between personal and general space
+                              through appropriate movement in a variety of
+                              activities.
+                            </td>
+                            <td>
+                              Diagnostic Assessment (formative) Day: 3<br />Summative
+                              Assessment Day: 7
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1.2.1</td>
+                            <td>
+                              Students can move in the straight, curved, and
+                              zig-zag pathways in a variety of activities.
+                            </td>
+                            <td>
+                              Diagnostic Assessment (formative) Day:<br />Summative
+                              Assessment Day: 7
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1.2.1</td>
+                            <td>
+                              Students will be able to change directions, speed,
+                              etc. while performing a variety of locomotor
+                              skills.
+                            </td>
+                            <td>Summative Assessment Day: 4</td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1.2.2</td>
+                            <td>
+                              Students will demonstrate the ability to jump and
+                              land with balance.
+                            </td>
+                            <td>Summative Assessment Day: 6</td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1.2.4</td>
+                            <td>
+                              Students can form tall and flat body shapes on
+                              teacher direction during selected activities.
+                            </td>
+                            <td>
+                              Diagnostic Assessment (formative) Day: 5<br />Summative
+                              Assessment Day: 5
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1.2.4</td>
+                            <td>
+                              Students demonstrate a change of levels when
+                              bending and stretching during selected activities.
+                            </td>
+                            <td>
+                              Diagnostic Assessment (formative) Day: 3<br />Summative
+                              Assessment Day: 7
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1.2.4</td>
+                            <td>
+                              Students will be able to identify by touching or
+                              pointing to the following body parts: Head,
+                              Shoulder, Knees, Toes, Ankles, Hips, Wrist, and
+                              Elbow
+                            </td>
+                            <td>
+                              Diagnostic Assessment (formative) Day: 1<br />Summative
+                              Assessment Day: 2
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">1.2.4</td>
+                            <td>
+                              Students will be able to demonstrate a variety of
+                              non-locomotor skills during selected activities.
+                            </td>
+                            <td>
+                              Diagnostic Assessment (formative) Day 3<br />Summative
+                              Assessment Day: 7
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-center">3</td>
+                            <td class="text-center">3.2.4</td>
+                            <td>
+                              Students will demonstrate the ability to follow
+                              directions in a variety of group activities.
+                            </td>
+                            <td>
+                              Diagnostic Assessments (formative) Day: 1<br />Summative
+                              Assessment Day: 7
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5. Resources & Materials Needed -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse5"
+                  >
+                    Resources & Materials Needed
+                  </button>
+                </h2>
+                <div
+                  id="collapse5"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#mainAccordion"
+                >
+                  <div class="accordion-body">
+                    <div><strong>Equipment:</strong></div>
+                    <ul>
+                      <li>Hula Hoops (1 per student)</li>
+                      <li>
+                        Long Ropes (1 per student or 1 rope per 2-3 students)
+                      </li>
+                      <li>
+                        2-3 sets of various height hurdles (6 inch, 8 inch, 12
+                        inch, 18 inch)
+                      </li>
+                      <li>10-12 Small Cones</li>
+                      <li>4-8 Large Cones</li>
+                      <li>15-20 Poly Spots</li>
+                      <li>Equipment to make obstacles</li>
+                    </ul>
+                    <div><strong>Teaching Materials/Resources:</strong></div>
+                    <ul>
+                      <li>
+                        Music appropriate to grade level/activity (see
+                        resources)
+                      </li>
+                      <li>Speakers (Bluetooth or other)</li>
+                      <li>Cues posters</li>
+                      <li>Skills posters</li>
+                    </ul>
+                    <div><strong>Facilities/Space:</strong> Gymnasium</div>
+                    <div><strong>Time:</strong> 40 minutes</div>
+                    <div>
+                      <strong>Teacher Expertise/Training/Certification:</strong>
+                    </div>
+                    <ul>
+                      <li>Knowledge of motor development</li>
+                      <li>
+                        Ability to identify and demonstrate fundamental
+                        locomotor and non-locomotor skills
+                      </li>
+                      <li>
+                        Understanding of movement concepts and relationship to
+                        performance of locomotor and non-locomotor skills
+                      </li>
+                      <li>
+                        Knowledge of developmentally appropriate activities and
+                        games.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6. Block Plan -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse6"
+                  >
+                    Block Plan
+                  </button>
+                </h2>
+                <div
+                  id="collapse6"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#mainAccordion"
+                >
+                  <div class="accordion-body">
+                    Click the button below to view the suggested teaching
+                    sequence (Block Plan):
+                    <br />
+                    <a
+                      href="docs/Locomotor_Nonlocomotor_Content_Set_1_BLOCK_PLAN.pdf"
+                      target="_blank"
+                      class="btn btn-dark mt-2"
+                    >
+                      Open PDF
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- 7. Lesson Plan with Nested Accordion -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse7"
+                    aria-expanded="false"
+                    aria-controls="collapse7"
+                  >
+                    Lesson Plan
+                  </button>
+                </h2>
+                <div
+                  id="collapse7"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#mainAccordion"
+                  aria-labelledby="heading7"
+                >
+                  <div class="accordion-body">
+                    <!-- Nested Accordion -->
+                    <div class="accordion" id="nestedAccordion">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="nestedHeading1">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#nestedCollapse1"
+                            aria-expanded="false"
+                            aria-controls="nestedCollapse1"
+                          >
+                            Day 1
+                          </button>
+                        </h2>
+                        <div
+                          id="nestedCollapse1"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#nestedAccordion"
+                          aria-labelledby="nestedHeading1"
+                        >
+                          <div class="accordion-body">
+                            <strong>Lesson Outcomes/Objectives</strong>
+                            <ol>
+                              <li>
+                                Students will stretch to make their bodies as
+                                tall as possible when directed by the teacher
+                                (S1 – 1.24)
+                              </li>
+                              <li>
+                                Students will explore personal space within a
+                                hoop by making their bodies as flat as possible
+                                (S1 – 1.2.4)
+                              </li>
+                              <li>
+                                Students will demonstrate a change in levels
+                                while bending and stretching (S1 – 1.2.4)
+                              </li>
+                              <li>
+                                Students will correctly indicate their head,
+                                knees, shoulders, and toes during the “Heads,
+                                Shoulders, Knees, and Toes” activity (NA)
+                              </li>
+                              <li>
+                                Students will follow the prompts of the “Freeze
+                                Song” activity (S3 – 3.2.4)
+                              </li>
+                            </ol>
+
+                            <strong>Equipment</strong>
+                            <ul>
+                              <li>Hula Hoops (1 per student)</li>
+                            </ul>
+
+                            <strong>Teaching Resources</strong>
+                            <ul>
+                              <li>“Freeze Song” – Mr. Heath</li>
+                              <li>“Head, Shoulders, Knees, and Toes” Song</li>
+                            </ul>
+                            <strong>Lesson Activities</strong>
+                            <div class="table-responsive">
+                              <table class="table table-bordered" role="table">
+                                <caption class="visually-hidden">
+                                  Lesson activities for Day 1 including time,
+                                  activity, description, and diagram
+                                </caption>
+                                <thead>
+                                  <tr class="table-active">
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Activity</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Diagram</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>5 min</td>
+                                    <td>
+                                      Instant Activity: “Freeze Song” (Mr. Heath
+                                      Album: Seriously Silly iTunes)
+                                    </td>
+                                    <td>
+                                      <ul>
+                                        <li>
+                                          Students are instructed to enter gym
+                                          and find a hoop and stand in that hoop
+                                        </li>
+                                        <li>
+                                          If 2 students go to the same hoop –
+                                          both of you should find a new hoop
+                                        </li>
+                                        <li>
+                                          If you are having trouble finding a
+                                          hoop – you can come to the “Help
+                                          Station” – which is me!
+                                        </li>
+                                        <li>
+                                          Students each have a hula-hoop, that
+                                          is placed on the floor.
+                                        </li>
+                                        <li>
+                                          Students will stand in the hoop
+                                          (representing self-space) and follow
+                                          directions of the song.
+                                        </li>
+                                        <li>
+                                          The song uses the cue “Freeze” for
+                                          students to stop the previous action.
+                                        </li>
+                                        <li>
+                                          “Unfreeze” is the cue for students to
+                                          resume moving.
+                                        </li>
+                                      </ul>
+                                    </td>
+                                    <td rowspan="6" style="text-align: center">
+                                      <a
+                                        href="#"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#pdfModal"
+                                        >Content Set I: Day One Diagram</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td><em>Transition</em></td>
+                                    <td>
+                                      <ul>
+                                        <li>
+                                          At completion of Instant Activity – on
+                                          “move signal” students will leave
+                                          hoops on the floor and walk to circle
+                                          in center of the gymnasium (spots
+                                          could be used as well)
+                                        </li>
+                                        <li>
+                                          Students sit on lines of circle or
+                                          spots
+                                        </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td>
+                                      Set Induction (Introduction to Lesson)
+                                    </td>
+                                    <td>
+                                      <ul>
+                                        <li>
+                                          Students are sitting in ½ or ¾ circle
+                                        </li>
+                                        <li>
+                                          Set Induction:
+                                          <ul>
+                                            <li>
+                                              Quick reminder – what do you do
+                                              when you hear me (or the song) say
+                                              “Freeze”?
+                                            </li>
+                                            <li>
+                                              Today we are going to learn about
+                                              some of our major body parts: our
+                                              Head, Shoulders, Knees and Toes
+                                              and what we can do with them:
+                                              <ul>
+                                                <li>
+                                                  Stretch – make our body as
+                                                  tall as possible
+                                                </li>
+                                                <li>Bend</li>
+                                                <li>
+                                                  Make our body look like a
+                                                  pancake (flat)
+                                                </li>
+                                                <li>
+                                                  What level are and what it
+                                                  means to change levels
+                                                </li>
+                                              </ul>
+                                            </li>
+                                          </ul>
+                                        </li>
+                                        <li>
+                                          The first thing we are going to do is
+                                          listen to a song and do what the song
+                                          says – do the best that you can.
+                                        </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td><em>Transition</em></td>
+                                    <td>
+                                      <ul>
+                                        <li>
+                                          On my signal – “GO” students will get
+                                          up and stand in a hoop
+                                        </li>
+                                        <li>
+                                          If 2 students go to the same hoop –
+                                          both of you should find a new hoop
+                                        </li>
+                                        <li>
+                                          If you are having trouble finding a
+                                          hoop – you can come to the “Help
+                                          Station” – which is me!
+                                        </li>
+                                        <li>Walking – “Go”</li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>10 min</td>
+                                    <td>
+                                      Pre-Assessment:<br />Body Parts: “Head,
+                                      Shoulders, Knees, and Toes” - iTunes
+                                    </td>
+                                    <td>
+                                      “Head, Shoulders, Knees, [&] Toes”<br />
+                                      <ul>
+                                        <li>Students stand in Hula Hoop</li>
+                                        <li>
+                                          Students will stay in hoop while
+                                          following directions of song and
+                                          touching their heads, shoulder, knees,
+                                          and toes.
+                                        </li>
+                                        <li>
+                                          The song helps students learn body
+                                          parts and practice changing levels
+                                          while listening to and following
+                                          movement cues.
+                                        </li>
+                                      </ul>
+                                      <strong>Pre-Assessment:</strong> using the
+                                      recording form, teacher indicates when a
+                                      student cannot correctly touch one of the
+                                      body parts identified in the song.<br />
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td><em>Transition</em></td>
+                                    <td>
+                                      <ul>
+                                        <li>
+                                          At completion of Pre-Assessment – and
+                                          on “Freeze” signal – students stop and
+                                          wait for further instructions.
+                                        </li>
+                                        <li>
+                                          On the “Go” signal – students are
+                                          asked to sit in their hoops to listen
+                                          for the instructions for the first
+                                          learning activity
+                                        </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td
+                                      class="table-active"
+                                      colspan="4"
+                                      style="
+                                        text-align: center;
+                                        font-weight: bold;
+                                      "
+                                    >
+                                      Skill Concept Development (Learning
+                                      Progression)
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>20 min</td>
+                                    <td>
+                                      Introduction to:<br />
+                                      <ul>
+                                        <li>Personal Space</li>
+                                        <li>Bending and Stretching</li>
+                                        <li>
+                                          Body Parts: Heads, Shoulders, Knees,
+                                          Toes
+                                        </li>
+                                      </ul>
+                                    </td>
+                                    <td>
+                                      All students are standing in hoops spread
+                                      out in general space. Music can be used as
+                                      stop/start signals. Teach:<br />
+                                      <ol>
+                                        <li>
+                                          Difference between personal and
+                                          general space
+                                        </li>
+                                        <li>
+                                          Exploration of personal space (hoop)
+                                          <ol type="a">
+                                            <li>
+                                              Hold arms out straight to side and
+                                              in front
+                                              <ol type="i">
+                                                <li>
+                                                  Can you touch anyone else?
+                                                </li>
+                                                <li>
+                                                  How close are you to someone
+                                                  else?
+                                                </li>
+                                              </ol>
+                                            </li>
+                                            <li>
+                                              Fill the hoop with your body
+                                            </li>
+                                          </ol>
+                                        </li>
+                                        <li>
+                                          Exploration of personal space and
+                                          range
+                                          <ol type="a">
+                                            <li>Tall – Small</li>
+                                            <li>Wide – Flat</li>
+                                          </ol>
+                                        </li>
+                                      </ol>
+                                      Introduce Bending and Stretching while in
+                                      Personal Space (students in hoops)<br />
+                                      <ol>
+                                        <li>
+                                          Teacher Demonstration of skills
+                                          (students repeat)
+                                          <ol type="a">
+                                            <li>
+                                              Stretch – full extension of body –
+                                              arms extended above head
+                                            </li>
+                                            <li>
+                                              Bend
+                                              <ol type="i">
+                                                <li>At elbow</li>
+                                                <li>At knee</li>
+                                                <li>At the waist</li>
+                                              </ol>
+                                            </li>
+                                          </ol>
+                                        </li>
+                                        <li>
+                                          On signal – students follow prompts
+                                          such as:
+                                          <ol type="a">
+                                            <li>
+                                              Make yourself as tall as you can
+                                            </li>
+                                            <li>
+                                              Make yourself as flat and wide as
+                                              you can
+                                            </li>
+                                            <li>Bend body part</li>
+                                          </ol>
+                                        </li>
+                                        <li>
+                                          Introduction to Body Parts (students
+                                          in hoops)
+                                          <ol type="a">
+                                            <li>
+                                              Mimic teacher touching and naming
+                                              body parts: Head – Shoulders –
+                                              Knees – Toes
+                                            </li>
+                                            <li>
+                                              Mimic teacher touching and naming
+                                              body parts: Elbows – Ankles – Hips
+                                              – Wrists
+                                            </li>
+                                          </ol>
+                                        </li>
+                                      </ol>
+                                    </td>
+                                    <td rowspan="2" style="text-align: center">
+                                      <a
+                                        href="#"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#pdfModal"
+                                        >Content Set I: Day One Diagram</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td><em>Transition</em></td>
+                                    <td>
+                                      <ul>
+                                        <li>
+                                          On “Freeze” signal – stop and stand in
+                                          hoop.
+                                        </li>
+                                        <li>
+                                          Listen to directions for “Head,
+                                          Shoulders, Knees, and Toes”
+                                        </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td
+                                      class="table-active"
+                                      colspan="4"
+                                      style="
+                                        text-align: center;
+                                        font-weight: bold;
+                                      "
+                                    >
+                                      Application Activity/Assessment
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>10 min</td>
+                                    <td>
+                                      “Head, Shoulder, Knees [&] Toes” Song
+                                      Activity/Assessment
+                                    </td>
+                                    <td>
+                                      “Head, Shoulders, Knees, [&] Toes”<br />
+                                      <ul>
+                                        <li>Students stand in Hula Hoop</li>
+                                        <li>
+                                          Students will stay in hoop while
+                                          following directions of song and
+                                          touching their heads, shoulder, knees,
+                                          and toes.
+                                        </li>
+                                      </ul>
+                                      <strong>Assessment:</strong> using the
+                                      recording form, teacher indicates when a
+                                      student cannot correctly touch one of the
+                                      body parts identified in the song. Compare
+                                      results from Pre-assessments
+                                    </td>
+                                    <td rowspan="3" style="text-align: center">
+                                      <a
+                                        href="#"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#pdfModal"
+                                        >Content Set I: Day One Diagram</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td><em>Transition</em></td>
+                                    <td>
+                                      <ul>
+                                        <li>
+                                          On signal – students bring hula hoops
+                                          to designated area
+                                        </li>
+                                        <li>
+                                          Walk to circle in center of the
+                                          gymnasium (spots could be used as
+                                          well)
+                                        </li>
+                                        <li>
+                                          Students sit on lines of circle or
+                                          spots for Closure
+                                        </li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td>Closure</td>
+                                    <td>
+                                      Check for Understanding Questions:<br />
+                                      <ul>
+                                        <li>
+                                          Can you touch your head?, your
+                                          shoulders? Your knees?, your toes?
+                                        </li>
+                                        <li>
+                                          Can everyone show me how to check for
+                                          your personal space? (reach arms out)
+                                        </li>
+                                        <li>
+                                          Who can bend their elbow? Your knee?
+                                          Your waist?
+                                        </li>
+                                        <li>Who can show me a High level?</li>
+                                        <li>Who can show me a low level?</li>
+                                      </ul>
+                                      Next time we will practice our Head,
+                                      Shoulders, Knees, and Toes and learn a few
+                                      more body parts and ways our body can
+                                      move.<br />
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Modal for Day One Diagram -->
+                      <div
+                        class="modal fade"
+                        id="pdfModal"
+                        tabindex="-1"
+                        aria-labelledby="pdfModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div
+                          class="modal-dialog modal-xl modal-dialog-centered"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="pdfModalLabel">
+                                Content Set I: Day One Diagram
+                              </h5>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <iframe
+                                src="docs/Content Set I - Day 1 Diagram.pdf"
+                                width="100%"
+                                height="600px"
+                                title="Day One Diagram PDF"
+                              ></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="nestedHeading2">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#nestedCollapse2"
+                            aria-expanded="false"
+                            aria-controls="nestedCollapse2"
+                          >
+                            Day 2
+                          </button>
+                        </h2>
+                        <div
+                          id="nestedCollapse2"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#nestedAccordion"
+                          aria-labelledby="nestedHeading2"
+                        >
+                          <div class="accordion-body">
+                            <!-- Content for Day 2 -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="nestedHeading3">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#nestedCollapse3"
+                            aria-expanded="false"
+                            aria-controls="nestedCollapse3"
+                          >
+                            Day 3
+                          </button>
+                        </h2>
+                        <div
+                          id="nestedCollapse3"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#nestedAccordion"
+                          aria-labelledby="nestedHeading3"
+                        >
+                          <div class="accordion-body">
+                            <!-- Content for Day 3 -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="nestedHeading4">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#nestedCollapse4"
+                            aria-expanded="false"
+                            aria-controls="nestedCollapse4"
+                          >
+                            Day 4
+                          </button>
+                        </h2>
+                        <div
+                          id="nestedCollapse4"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#nestedAccordion"
+                          aria-labelledby="nestedHeading4"
+                        >
+                          <div class="accordion-body">
+                            <!-- Content for Day 4 -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="nestedHeading5">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#nestedCollapse5"
+                            aria-expanded="false"
+                            aria-controls="nestedCollapse5"
+                          >
+                            Day 5
+                          </button>
+                        </h2>
+                        <div
+                          id="nestedCollapse5"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#nestedAccordion"
+                          aria-labelledby="nestedHeading5"
+                        >
+                          <div class="accordion-body">
+                            <!-- Content for Day 5 -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="nestedHeading6">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#nestedCollapse6"
+                            aria-expanded="false"
+                            aria-controls="nestedCollapse6"
+                          >
+                            Day 6
+                          </button>
+                        </h2>
+                        <div
+                          id="nestedCollapse6"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#nestedAccordion"
+                          aria-labelledby="nestedHeading6"
+                        >
+                          <div class="accordion-body">
+                            <!-- Content for Day 6 -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="nestedHeading7">
+                          <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#nestedCollapse7"
+                            aria-expanded="false"
+                            aria-controls="nestedCollapse7"
+                          >
+                            Day 7
+                          </button>
+                        </h2>
+                        <div
+                          id="nestedCollapse7"
+                          class="accordion-collapse collapse"
+                          data-bs-parent="#nestedAccordion"
+                          aria-labelledby="nestedHeading7"
+                        >
+                          <div class="accordion-body">
+                            <!-- Content for Day 7 -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 8. Assessments & Grading Criteria -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse8"
+                  >
+                    Assessments & Grading Criteria
+                  </button>
+                </h2>
+                <div
+                  id="collapse8"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#mainAccordion"
+                >
+                  <div class="accordion-body">
+                    Click the button below to view assessment guidelines:
+                    <br />
+                    <a
+                      href="docs/Assessments content set 1pdf"
+                      target="_blank"
+                      class="btn btn-dark mt-2"
+                    >
+                      Open PDF
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 9. Teacher Resources & At Home Activities -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse9"
+                  >
+                    Teacher Resources & At Home Activities
+                  </button>
+                </h2>
+                <div
+                  id="collapse9"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#mainAccordion"
+                >
+                  <div class="accordion-body">
+                    Click the button below to view additional teacher resources
+                    and suggested at home activities:
+                    <br />
+                    <a
+                      href="docs/Locomotor_nonlocomotor_Content_Set_1_Resources_AtHomeActivities.pdf"
+                      target="_blank"
+                      class="btn btn-dark mt-2"
+                    >
+                      Open PDF
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer Section -->
     <footer class="sticky-footer mt-auto py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="footer-logo d-flex align-items-center">
-                <a href="https://us.humankinetics.com/" target="_blank">
-                    <img src="HK logo horizontal 4C.png" alt="Logo" style="height: 40px;">
-                </a>
-            </div>
-            <div class="footer-center-text text-center">
-                <p class="mb-0">PE for Life</p>
-            </div>
-            <div class="footer-right-text">
-                <p class="mb-0">© 2025 Human Kinetics</p>
-            </div>
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="footer-logo d-flex align-items-center">
+          <a href="https://us.humankinetics.com/" target="_blank">
+            <img
+              src="HK logo horizontal 4C.png"
+              alt="Logo"
+              style="height: 40px"
+            />
+          </a>
         </div>
+        <div class="footer-center-text text-center">
+          <p class="mb-0">PE for Life</p>
+        </div>
+        <div class="footer-right-text">
+          <p class="mb-0">© 2025 Human Kinetics</p>
+        </div>
+      </div>
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sidebar = document.querySelector(".sidebar");
-            const toggleButton = document.getElementById("sidebarToggle");
-            const mainContent = document.querySelector(".main-content");
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebar = document.querySelector(".sidebar");
+        const toggleButton = document.getElementById("sidebarToggle");
+        const mainContent = document.querySelector(".main-content");
 
-            toggleButton.addEventListener("click", function () {
-                sidebar.classList.toggle("active");
-                mainContent.classList.toggle("shift-right");
-            });
+        toggleButton.addEventListener("click", function () {
+          sidebar.classList.toggle("active");
+          mainContent.classList.toggle("shift-right");
         });
+      });
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Save open menus to localStorage
-            document.querySelectorAll(".sidebar .collapse").forEach(section => {
-                section.addEventListener("show.bs.collapse", () => {
-                    const openIds = JSON.parse(localStorage.getItem("openMenuIds") || "[]");
-                    if (!openIds.includes(section.id)) {
-                        openIds.push(section.id);
-                        localStorage.setItem("openMenuIds", JSON.stringify(openIds));
-                    }
-                });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Save open menus to localStorage
+        document.querySelectorAll(".sidebar .collapse").forEach((section) => {
+          section.addEventListener("show.bs.collapse", () => {
+            const openIds = JSON.parse(
+              localStorage.getItem("openMenuIds") || "[]"
+            );
+            if (!openIds.includes(section.id)) {
+              openIds.push(section.id);
+              localStorage.setItem("openMenuIds", JSON.stringify(openIds));
+            }
+          });
 
-                section.addEventListener("hide.bs.collapse", () => {
-                    let openIds = JSON.parse(localStorage.getItem("openMenuIds") || "[]");
-                    openIds = openIds.filter(id => id !== section.id);
-                    localStorage.setItem("openMenuIds", JSON.stringify(openIds));
-                });
-            });
-
-            // Restore open menu state from localStorage
-            const savedIds = JSON.parse(localStorage.getItem("openMenuIds") || "[]");
-            savedIds.forEach(id => {
-                const el = document.getElementById(id);
-                if (el && el.classList.contains("collapse")) {
-                    el.classList.add("show");
-                }
-            });
+          section.addEventListener("hide.bs.collapse", () => {
+            let openIds = JSON.parse(
+              localStorage.getItem("openMenuIds") || "[]"
+            );
+            openIds = openIds.filter((id) => id !== section.id);
+            localStorage.setItem("openMenuIds", JSON.stringify(openIds));
+          });
         });
+
+        // Restore open menu state from localStorage
+        const savedIds = JSON.parse(
+          localStorage.getItem("openMenuIds") || "[]"
+        );
+        savedIds.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el && el.classList.contains("collapse")) {
+            el.classList.add("show");
+          }
+        });
+      });
     </script>
 
-
     <!-- Bootstrap JS and Dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
